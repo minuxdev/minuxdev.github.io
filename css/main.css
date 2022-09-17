@@ -13,10 +13,15 @@
     --child-sm-padding: 8px;
     --parent-md-padding: 32px;
     --child-md-padding: 16px;
+    --parent-lg-padding: 64px;
+    --child-lg-padding: 32px;
     --img-padding: 10px;
     --card-shadow: 1px 3px 10px #aaaaaa;
     
 }
+
+
+
 
 
 
@@ -39,6 +44,12 @@ body {
     padding: 0;
 }
 
+h1 {
+    text-align: center;
+}
+h2 {
+    text-align: start;
+}
 
 /*  PREDEFINING */
 figure {
@@ -48,6 +59,9 @@ img {
     width: 100%;
     height: 100%;
 }
+
+
+
 
 
 
@@ -96,8 +110,8 @@ header {
     grid-area: header;
 }
 .logo {
-    height: 4rem;
-    width: 4rem;
+height: 4rem;
+width: 4rem;
 }
 .logo img {
     border-radius: 100%;
@@ -118,10 +132,15 @@ header {
 
 
 
-
+/*  SIDENAV     */
 .sidenav {
     grid-area: nav;
 }
+.sidenav > section {
+    width: 100%;
+    text-align: center;
+}
+
 
 
 
@@ -150,15 +169,28 @@ footer {
             "nav main"
             "aside aside"
             "footer footer"
-        ;
-        grid-template-columns: .75fr 1.5fr;
+            ;
+            grid-template-columns: .75fr 1.5fr;
         grid-template-rows: 128px 1fr 160px 128px;
     }
+    .container > * {
+        padding: var(--parent-md-padding);
+    }
 
-    .sidenav section {
+    .sidenav > section {
         position: sticky;
         top: 15vh;
+    }
+    .side-menu {
+        padding: 0;
+        /* word-wrap: break-word; */
         overflow-x: auto;
+    }
+    .side-menu li {
+        width: 100%;
+        overflow: auto;
+        margin: .5em 0;
+
     }
     
 }
@@ -167,17 +199,20 @@ footer {
 
 /*  LARGE SCREEN    */
 
-@media screen and (min-width: 820px) {
+@media screen and (min-width: 920px) {
     .container {
         grid-template-areas: 
             "header header header"
             "nav main aside"
             "footer footer footer"
         ;
-        grid-template-columns: minmax(300px, .75fr) 1.5fr .5fr;
+        grid-template-columns: minmax(300px, .65fr) 1.5fr .5fr;
         grid-template-rows: 208px 1fr 208px;
     }
-
+    .container > * {
+        padding: var(--parent-lg-padding);
+    }
+    
     .top-menu {
         display: flex;
     }
@@ -195,4 +230,25 @@ footer {
 
 
 
+/*     ANIMATIONS   */
+
+@keyframes liAnimator {
+    25% {transform: translateX(-5px)}
+    75% {transform: translateX(15px)}
+    100% {
+            transform: translateX(0px);
+
+        }
+}
+
+/* 
+li {
+    transition: .4s all;
+}
+li:hover {
+    animation-name: liAnimator;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+} */
 
