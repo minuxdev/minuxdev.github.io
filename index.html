@@ -16,7 +16,7 @@
         <header>
 
             <figure class="logo">
-                <img src="images/logo.jpg" alt="Logo">
+                <img src="images/logo.png" alt="logo">
             </figure>
 
             <nav>
@@ -45,7 +45,7 @@
                     <li>
                         <a href="#tags">Tags</a>
                         <ul>
-                            <li><a href="#closed-tag">Tags de fechamento</a></li>
+                            <li><a href="#closed-tag">Tags fechadas</a></li>
                             <ol>
                                 <li><a href="#struct-tag">Tags estruturais</a></li>
                                 <li><a href="#content-tag">Tags de conteudo</a></li> 
@@ -53,7 +53,7 @@
                                 <li><a href="#styel-tag">Tags de estilo e scripts</a></li>
                                 <li><a href="#comm-tag">Tags de comentario</a></li>
                             </ol>
-                            <li><a href="#opened-tag">Tags de fechamento automatico</a></li>
+                            <li><a href="#opened-tag">Tags abertas</a></li>
                         </ul>
                     </li>
                     <li><a href="#attributes">Atributos</a></li>
@@ -103,16 +103,16 @@
                     <dl id="list-struct">
                         <dt><b>!DOCTYPE</b></dt>
                             <dd>
-                                Um identificador do tipo de documento
+                                Informa ao navegador que tipo de documento estamos enviando para que o mesmo possa trata-lo de acordo com a semantica adequada.
                             </dd>
                         <dt><b>html</b></dt>
                             <dd>
-                            Representa o proprio documento html.
+                            Representa o proprio documento html a ser interpretado pelo navegador.
                             </dd>
                         <dt><b>head</b></dt>
-                            <dd>Contem as informacoes de cabecalho como titulo, lingua, links de arquivos a serem carregados entre outras informacoes.</dd>
+                            <dd>Contem as informacoes de cabecalho como <em>titulo, tipo de decodificacao de caracteres, links de arquivos </em> a serem carregados entre outras informacoes que ajudam o navegador a preparar o ambiente, ou por outra, contem as informacoes de identificacao o documento bem como as sua dependencias (se precisa ou nao buscar informacoes externas, exemplo, fontes, scripts e ou folhas de estilo).</dd>
                         <dt><b>body</b></dt>
-                            <dd>Representa o corpo do documento, ou seja, o conteudo a ser renderizado pelo navegador.</dd>
+                            <dd>Representa o conjunto de informacoes que queremos servir ao usuario quando acessar a pagina.</dd>
                     </dl>
 
                     <!-- EXAMPLE -->
@@ -130,20 +130,27 @@
                     <h2 id="tags">Tags HTML</h2>
     
                     <p>
-                        Sao estruturas de linguagem de marcacao de conteudo e instrucoes, e atraves delas que o navegador "sabe" como e onde renderizar o conteudo entre as elas.
+                        Sao estruturas de linguagem de marcacao de conteudo e instrucoes, e atraves delas que o navegador "sabe" como e onde renderizar o conteudo entre elas.
                     </p>
                     <p>
-                        As Tags HTML (tambem chamados de elementos HTML) delimitam (apenas as tags de conteudo) o comeco e o termino de uma instrucao como, por exemplo, o comeco e o fim de um pragrafo numa pagina.
+                        As Tags HTML (tambem chamados de elementos HTML) delimitam (apenas as tags de conteudo) o comeco e o termino da zona de influencia como, por exemplo, o comeco e o fim de um pragrafo numa pagina.
                     </p>
-                    <p>Cada elemento (nome dado tambem a um tag) HTML (repito, apenas os de conteudo), e constutuido por duas tags sendo uma <i>de abertura</i> e a outra de <i>fecho.</i> Elas possuem a seguinte estrutura    
+                    <p>Cada elemento (nome dado tambem a um tag) HTML <em>(repito, apenas os de conteudo)</em>, e constutuido por duas tags sendo uma <i>de abertura</i> e a outra de <i>fecho.</i> Elas possuem a seguinte estrutura    
                     </p>
-                    <!-- exemplo -->
-                    <br><b>openedTagName</b> <em>... conteudo ...</em><b>closedTagName</b>
+
+                    <!-- EXAMPLE -->
+                    <div class="example-box">
+                        <figure>
+                            <img src="images/examples/tag.png" alt="example image" >
+                        </figure>
+                        <figcaption>Exemplo de um comentario HTML</figcaption>
+                    </div>
+                    
     
                     <p>As tags HTML se subdividem, basicamente em dois grupos sendo um o das tags de conteudo (como e o caso de <b><i>h1-h6</i></b>, <b><i>p</i></b>, <b><i>a</i></b>, <b><i>body</i></b>, etc ) e outro de conteudo vazio (a exemplo de <b><i>img</i></b>, <b><i>link</i></b>, <b><i>meta</i></b>, etc).</p>
     
 
-                    <h3 id="closed-tag">Tags de fechamento</h3>
+                    <h3 id="closed-tag">Tags fechadas</h3>
 
                     <p>Sao assim chamadas pelo facto de delimitarem a sua zona de influencia com a tag de abertura e de fechamento. <i>Inspecione-me!</i></p>
                     <p>
@@ -158,29 +165,35 @@
                         por parte do navegador, optimizam os processos de <b><i>Search Engine Optimization</i></b> <em>(Motor de busca optimizada, em traducao livre)</em>
                         ou simplesmente <em>SEO</em>.
                     </p>
-                    <p>Porque as tags HTML sao muitas <i>(perto de 110 tags, muita coisa para decorar, nao acha?, kkk...)</i></p>, a lista a seguir descreve apenas as mais comuns de se ver em um documento HTML.
+                    <p>Porque as tags HTML sao muitas <i>(perto de 110 tags, muita coisa para decorar, nao acha?, kkk...)</i>, a lista a seguir descreve apenas as mais comuns de se ver em um documento HTML.</p>
 
                     <dl>
                         <dt>header</dt>
-                            <dd>Define o cabecalho da <b>PAGINA</b> e <b>NAO DO DOCUMENTO</b>.</dd>
+                            <dd>De um modo geral, e a parte onde reside a identidade do site como um todo podendo.
+                                E comumente constuduida por varias informacoes, porem, a que mais se destaca e, de um modo geral, <em>o logotipo do site, o menu de navegacao pelas paginas principais.</em>
+                            </dd>
                         <dt>main</dt>
-                            <dd>Representa o conteudo principal da pagina.</dd>
+                            <dd>Representa o conjunto de informacoes que queremos servir ao usuario quando visitar a pagina sendo sendo esse (o conjunto) do interece deste (o usuario).</dd>
                         <dt>footer</dt>
-                            <dd>Define o rodape da pagina, geralmente contem informacoes do site.</dd>
+                            <dd>Define o rodape da pagina, geralmente contem informacoes adicionais ao site como <em>parceiros, contactos, direitos autorais,</em> entre outras.</dd>
                         <dt>section</dt>
-                            <dd>Como o nome sugere, definem uma sessao na pagina.</dd>
+                            <dd>Como o nome sugere, definem uma sessao na pagina podendo ser, por exemplo, em subtitulos.</dd>
                         <dt>article</dt>
-                            <dd>Definem artigos, sao geralmente usada pelos blogs para separar artigos <em>(exemplo, Sport e Culinaria).</em></dd>
+                            <dd>Definem artigos, sao de um modo geral usadas pelos blogs para separar artigos <em>(exemplo, Sport e Culinaria).</em></dd>
                         <dt>asside</dt>
                             <dd>Contem informacoes tangencialmente relacionadas com o conteudo principal <em>(exemplo, sugestoes).</em></dd>
                         <dt>nav</dt>
-                            <dd>Quase sempre usada junto com listas, define conteudo de navegacao.</dd>
+                            <dd>Quase sempre usada junto com listas, contem conteudo de navegacao <em>(links)</em>.</dd>
                         <dt>div</dt>
                             <dd>Nao possui nenum valor semantico, porem, muito usada para divisao da pagina e melhor organizacao no agrupamento das demais tags.</dd>
                     </dl>
 
                     <h4 id="content-tag">Tags de conteudo</h4>
-                    <p>Tal como as tags estruturais, as de conteudo tambem podem ser agrupadas em funcao do seu valor semantico numa pagina HTML. Neste documento usamos nivel hierarquico.</p>
+                    <p>Tal como as tags estruturais, as de conteudo tambem podem ser agrupadas em funcao do tipo de elmento que representam numa pagina HTML.</p>
+
+                    <h5 id="text-tag">Tags de texto</h5>
+
+                    <p>Sao aquelas que tem um significado caracteristico e semantico para um texto. A baixo vai a lista de algumas seguindo o nivel hieraquico.</p>
                     <dl>
                         <dt>Titulos</dt>
                             <dd>Existem 6 niveis para titulos numa pagina de modo a melhor destacar o nivel de importancia numa pagina sendo o h1 <em>(recomenda-se que seja apenas um e unico por pagina)
@@ -196,6 +209,22 @@
                             <dd>Usada para ancorar um link num texto.</dd>
                     </dl>
 
+                    <h5 id="media-tag">Tags de media</h5>
+
+                    <p>
+                        Servem para incluir conteudo de <b><i>media</i></b> como <em>imagen, audio, video iframes</em> entre outras proporcionando assim recursos de controle adequadoa ao tipo de media a ser renderizado. Sao comumente usadas as tags de
+                    </p>
+                    <dl>
+                        <dt>img</dt>
+                            <dd>Usada para carregar imagens.</dd>
+                        <dt>audio</dt>
+                            <dd>Serve para carregar um arquivo de audio.</dd>
+                        <dt>video</dt>
+                            <dd>Serve para carregar video.</dd>
+                        <dt>iframe</dt>
+                            <dd>Usada para carregar uma pagina externa dentro desta.</dd>
+                    </dl>
+
 
                     <h4 id="comm-tag">Tags de comentario</h4>
                     <p>Na programacao em geral, e de costume fazer comentarios no codigo durante o desenvolvimento de qualquer projecto como uma forma de conversar com outros programadores ou com o seu <em>eu</em> do futuro visto que <em>voce nao vai se recordar da ideia por detras de uma parte do seu proprio codigo daqui a algum tempo</em> e e ai onde o comentario entra.
@@ -204,7 +233,7 @@
                     </p>
 
                     <p>
-                        <b><i>E aquela parte de codigo que nao sera renderizada pelo navegador servindo apenas para guiar o desenvolvedor para as possiveis mudancas ou orientacoes do codigo</i></b>. No exemplo abaixo, as tags de comentario estao sublinhadas.
+                        <b><i>E aquela parte de codigo que nao sera renderizada pelo navegador servindo apenas para guiar o desenvolvedor nas possiveis alteracoes ou orientacoes</i></b>. No exemplo abaixo, as tags de comentario estao sublinhadas.
                     </p>
                     
                     <!-- EXAMPLE -->
@@ -233,7 +262,8 @@
                     </div>
     
     
-                    <h3 id="opened-tag">Tags de auto fechamento proprio</h3>
+                    <h3 id="opened-tag">Tags abertas</h3>
+
                     
                 </section>
 <!-- 
@@ -247,10 +277,38 @@
         </main>
         
         
-        <aside></aside>
+        <aside>
+
+            <div class="card-wrapper">
+                    
+                <div class="card">
+                    <figure>
+                        <img src="images/header-backg.webp" alt="add1">
+                    </figure>
+                    <h4>Card Title</h4>
+                </div>  
+
+                <div class="card">
+                    <figure>
+                          <img src="images/header-backg.webp" alt="add1">
+                      </figure>
+                      <h4>Card Title</h4>
+                  </div>    
+            </div>
+
+                        </aside>
         
         
-        <footer></footer>
+        <footer>
+
+
+            <section>
+                
+
+            </section>
+
+
+        </footer>
 
 
         <script>
