@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Above</title>
     <link rel="stylesheet" href="css/main.css">
+    <script src="js/jQuery.js"></script>
 </head>
 <body>
 
@@ -81,6 +82,36 @@
         
         
         <footer></footer>
+
+
+        <script>
+            $(document).ready(function() {
+                function changToggle() {
+
+                    var toggle = $('#toggle img').attr('src');
+
+                    $('#toggle').click(function() 
+                        {
+                            if (toggle == 'images/b-icons/list.svg') {
+                                $('#toggle img').attr('src', 'images/b-icons/x-lg.svg');
+                                toggle = 'images/b-icons/x-lg.svg';
+
+                            } else  {
+                                toggle = 'images/b-icons/list.svg';
+                                $('#toggle img').attr('src', 'images/b-icons/list.svg');
+                            }
+                        }
+                    );
+                }
+
+                changToggle();
+
+
+
+            })
+
+
+        </script>
 
 
     </div>
