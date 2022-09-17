@@ -37,6 +37,12 @@ body {
 }
 
 
+/*  PREDEFINING */
+img {
+    width: 100%;
+    height: 100%;
+}
+
 
 
 
@@ -65,9 +71,38 @@ body {
 
 
 
+/*  GROUP OF ELEMENTS THAT SHARE THE SAME TYPE OF DISPLAY   */
+header,
+.top-menu,
+
+footer
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+
 header {
     grid-area: header;
 }
+.logo {
+    height: 4rem;
+    width: 4rem;
+}
+.logo img {
+    border-radius: 100%;
+}
+.top-menu li {
+    padding: .5em;
+    margin: auto 1em;
+}
+
+
+
+
+
 
 .sidenav {
     grid-area: nav;
@@ -85,10 +120,6 @@ footer {
     grid-area: footer;
 }
 
-
-img {
-    display: none;
-}
 
 
 
@@ -118,7 +149,7 @@ img {
             "nav main aside"
             "footer footer footer"
         ;
-        grid-template-columns: minmax(max-content, .5fr) 1.5fr .5fr;
+        grid-template-columns: minmax(300px, .75fr) 1.5fr .5fr;
         grid-template-rows: 208px 1fr 208px;
     }
 }
