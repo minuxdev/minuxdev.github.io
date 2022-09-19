@@ -8,7 +8,6 @@
     --sub-title: #7d7d7d;
     --bg-blue: #001dd9;
     --gutter: 10px;
-    --card-radius: 10px;
     --imag-radius: 24px;
     --parent-sm-padding: 16px;
     --child-sm-padding: 8px;
@@ -17,8 +16,9 @@
     --parent-lg-padding: 32px 64px;
     --child-lg-padding: 16px 32px;
     --img-padding: 10px;
+    --card-radius: 4px;
     --card-shadow: 1px 3px 10px #aaaaaa;
-    --sub-title: 1.4em;
+    --sub-title: 2.15em;
     
 }
 
@@ -32,10 +32,9 @@
     list-style: none;
     text-decoration: none;
     box-sizing: border-box;
-    font-family: "Quicksand", sans-serif;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-align: justify;
-    line-height: 1.5em;
-    word-spacing: .1em;
+    word-spacing: .1rem;
 }
 
 
@@ -50,13 +49,21 @@ body {
 
 h1 {
     text-align: center;
-    font-size: 1.8em;
-    margin: 1em 0;
+    font-size: 2.5em;
+    padding: .5em;
 }
 h2 {
-    text-align: start;
+    text-align: center;
     font-size: var(--sub-title);
-    margin: 1em 0;
+}
+
+h3 {
+    font-size: 1.8rem;
+    margin: auto;
+}
+h4 {
+    font-size: 1.5rem;
+    margin: auto;
 }
 
 a {
@@ -70,6 +77,10 @@ figure {
 img {
     width: 100%;
     height: 100%;
+}
+
+p, dd, dt, a {
+    font-size: 1.1em;
 }
 
 
@@ -89,7 +100,7 @@ img {
 .container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 88px .5fr 1fr 128px 88px;
+    grid-template-rows: 88px auto 1fr auto 88px;
     grid-template-areas: 
         "header"
         "nav"
@@ -107,7 +118,7 @@ img {
 /*  GROUP OF ELEMENTS THAT SHARE THE SAME TYPE OF DISPLAY   */
 header,
 .top-menu,
-
+.card-wrapper,
 footer
 {
     display: flex;
@@ -134,8 +145,8 @@ height: 100%;
 
 #toggle {
     border: none;
-    height: 28px;
-    width: 28px;
+    height: 24px;
+    width: 24px;
     padding: 0;
 }
 #toggle img {
@@ -184,6 +195,18 @@ main {
 aside {
     grid-area: aside;
 }
+.card-wrapper {
+    justify-content: space-evenly;
+}
+.card {
+    width: 12rem;
+    height: 12rem;
+    margin: auto;
+}
+.card img {
+    border-radius: var(--card-radius);
+}
+.card h4 { text-align: center;}
 
 footer {
     grid-area: footer;
@@ -233,13 +256,20 @@ footer {
 /*  LARGE SCREEN    */
 
 @media screen and (min-width: 920px) {
+    h1 { font-size: 2rem; margin: auto;}
+    h2 { font-size: 1.8rem; margin: auto;}
+    h3 { font-size: 1.6rem; margin: auto;}
+    h4 { font-size: 1.3rem; margin: auto;}
+    h5 { font-size: 1.1rem; margin: auto;}
+
+
     .container {
         grid-template-areas: 
             "header header header"
             "nav main aside"
             "footer footer footer"
         ;
-        grid-template-columns: minmax(300px, .65fr) 1.5fr .5fr;
+        grid-template-columns: minmax(300px, .5fr) 1.5fr auto;
         grid-template-rows: 208px 1fr 208px;
     }
 
@@ -257,6 +287,12 @@ footer {
     #toggle {
         display: none;
     }
+
+    .card-wrapper {
+        flex-direction: column;
+        padding-top: 3.5rem;
+    }
+    .card {width: 14rem; }
 }
 
 
