@@ -48,7 +48,6 @@ header {
 
 
 /*  display type  {flex}  */  
-
 .top-nav, .top-nav ul, .container > *
 {
     display: flex;
