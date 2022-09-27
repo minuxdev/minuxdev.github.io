@@ -16,9 +16,10 @@
             <nav class="top-nav">
                 <a id="logo" href="#">Above</a>
                 <ul>
-                    <li><a href="#">Sobre</a></li>
-                    <li><a href="#">Cursos</a></li>
-                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#courses">Cursos</a></li>
+                    <li><a href="#galery">Galeria</a></li>
+                    <li><a href="#contact">Contacto</a></li>
                 </ul>
                 <div class="toggle">&bigotimes; </div>
             </nav>
@@ -35,7 +36,7 @@
             </div>
         </section>
 
-        <section class="about">
+        <section class="about" id="about">
             <div class="content">
                 <h2>Sobre Nos</h2>
                 <p>
@@ -45,7 +46,7 @@
             </div>
         </section>
 
-        <section class="courses">
+        <section class="courses" id="courses">
             <div class="content">
                 <h2>O que ensinamos</h2>
                 <div class="cards-wrap">
@@ -86,7 +87,7 @@
             </div>
         </section>
 
-        <section class="galery">
+        <section class="galery" id="galery">
             <div class="content">
                 <h2>Galeria</h2>
                 <div class="photos">
@@ -102,7 +103,7 @@
         </section>
 
 
-        <section class="contact">
+        <section class="contact" id="contact">
             <div class="content">
                 <h2>Fale conosco</h2>
                 <p>Lorem ipsum dolor sit amet consectetur perspiciatis.</p>
@@ -112,6 +113,7 @@
                             <img src="images/icons/telephone-forward.svg" alt="">
                         </figure>
                         <a href="tel:+258845241937">+258845241937</a>
+                        <a href="tel:+258845241937">+258845241937</a>
                     </div>
                     <div class="talk">
                         <figure>
@@ -120,6 +122,13 @@
                         <a href="mailto:minux.midi@gmail.com">minux.midi@developer.com</a>
                     </div>
                 </div>
+                <form action="" class="contact-form">
+                    <label for="">
+                        <input type="text" name="user" placeholder="Your name...">
+                        <input type="text" name="user" placeholder="Your name...">
+                    </label>
+                    <textarea name="message" id="" cols="30" rows="10"></textarea>
+                </form>
             </div>
         </section>
 
@@ -133,6 +142,16 @@
 
     </div>
 
+
+    <script>
+        const header = document.querySelector('header');
+        const banner = document.querySelector('.banner');
+
+        window.addEventListener('scroll', function() {
+            header.classList.toggle('sticky', window.scrollY > 10);
+            // banner.classList.toggle('sticky', window.scrollY > 10);
+        })
+    </script>
 
 </body>
 </html>
