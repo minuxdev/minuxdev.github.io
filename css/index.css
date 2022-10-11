@@ -1,0 +1,52 @@
+@import url('main.css');
+
+/*  banner  */
+.banner {
+    min-height: 30vh;
+    margin-top: 10vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6% 3%;
+
+    background: url('../images/banners/children.jpg') no-repeat fixed center / cover;
+}
+
+main > * {
+    max-width: var(--max-width);
+    margin: 1.5rem auto;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.card-wrap {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.card {
+    /* border: 1px solid #aaa; */
+    padding: .25rem;
+    border-radius: var(--card-radius);
+}
+.card figure {
+    width: 100%;
+    height: 16em;
+}
+.card  img {border-radius: var(--card-radius);}
+.card p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: .875em;
+}
+.card > a {
+    background-color: transparent;
+    color: var(--alt-bg-color);
+}
