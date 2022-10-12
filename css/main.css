@@ -35,6 +35,7 @@
                 'Helvetica Neue', sans-serif;
     text-align: justify;
     line-height: 1.5em;
+    outline: none;
 }
 
 html {
@@ -219,15 +220,20 @@ main > section > * {
 
 
 /*  CARDS   */
-
 .card-wrap {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    justify-content: center;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    gap: 2%;
     align-items: center;
-    gap: .5rem;
     margin-bottom: 1rem;
 }
+.card {
+    flex: 1 0 240px;
+    margin: 2% auto;
+    width: 100%;
+}
+
 
 .card {
 
@@ -452,7 +458,17 @@ footer {
         margin: auto;
     }
 
-
+    .card-wrap {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 2%;
+        align-items: center;
+    }
+    .card {
+        flex: 1 0 240px;
+    }
     
 
 

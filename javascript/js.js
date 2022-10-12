@@ -47,12 +47,15 @@ function onScrollAnimation(selector) {
     })
 }
 
-
-
 onScrollAnimation('.section');
-
 toggleMenu(
     '#toggle', '.menu', '.menu li', 'fadeIn'
 );
+
+const banner = document.querySelectorAll('.section');
+for (let i = 0; i < 2; i++) {
+    banner[i].classList.toggle('enter');
+}
+
 })
 
