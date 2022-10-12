@@ -16,6 +16,7 @@ function toggleMenu(toggleBtn, containerMenu, listItems, animationName) {
     let menuLinks = document.querySelectorAll(listItems);
 
     _toggleBtn.addEventListener('click', () => {
+        _toggleBtn.classList.toggle('active');
         sideMenu.classList.toggle('active');
 
         menuLinks.forEach((val, index) => {

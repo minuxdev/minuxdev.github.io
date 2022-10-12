@@ -112,15 +112,20 @@ header {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    gap: .3rem;
+    gap: 8px;
     cursor: pointer;
 }
 
 #toggle > div {
-    height: .15rem;
+    height: 2px;
     width: 1.8rem;
     background-color: #eee;
+    transition: all .4s ease;
 }
+
+#toggle.active .t-1 {transform: translateY(12px) rotate(-45deg);}
+#toggle.active .t-2 {opacity: 0;}
+#toggle.active .t-3 {transform: translateY(-12px) rotate(45deg)}
 
 .menu {
     position: fixed;
@@ -142,11 +147,15 @@ header {
 .menu > li {
     margin-left: 1rem;
     padding: .25rem 0 .25rem 1rem;
+    border: 2px solid transparent;
+    cursor: pointer;
 }
+
 
 .menu a {
     color: var(--white-color);
-    font-size: 1.2em;
+    font-size: 1em;
+    font-weight: 500;
 }
 
 .menu.active {
@@ -265,6 +274,7 @@ main > section > * {
     max-width: max-content;
     width: 100%;
     text-align: center;
+    font-weight: 700;
 }
 .card-btn:hover {
     text-decoration: underline;
@@ -357,6 +367,8 @@ footer {
 }
 
 
+
+
 /*  MEDIA QUERIES   */
 @media screen and (min-width: 768px) {
     :root {
@@ -398,19 +410,29 @@ footer {
     .menu li {
         margin: 0 1.5rem;
         opacity: 1;
-        transform: translateX(0)
+        transform: translate(0);
+        border: 2px solid transparent;
+        padding: .25rem 1rem;
+        border-radius: var(--card-radius);
+        transition: all .4s ease;
+    }
+    .menu li:hover {
+        transform: translateY(-5px);
+        border: 2px solid #354652;
     }
 
-    .section.enter {
-        transform: translateX(0);
-        opacity: 1;
+    /* for border-buttom animation effect */
+    /* .menu li::after {
+        display: block;
+        content: "";
+        height: 4px;
+        background-color: #e45412;
+        width: 0%;
+        transition: all .4s ease;
     }
-
-    .section.leave {
-        transform: translateX(50px);
-        opacity: 0;
-    }
-
+    .menu li:hover::after {
+        width: 100%;
+    } */
 
     .footer-info {
         display: grid;
@@ -437,6 +459,16 @@ footer {
 }
 
 
+
+.section.enter {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.section.leave {
+    transform: translateX(50px);
+    opacity: 0;
+}
 
 @keyframes fadeIn {
     to {opacity: 1; transform: translateX(0);}
