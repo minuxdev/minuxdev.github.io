@@ -34,12 +34,12 @@ function onScrollAnimation(selector) {
 
         let el = document.querySelectorAll(selector);
         let windowHeight = window.innerHeight;
-        let inOffset = windowHeight - (windowHeight / 3);
-        let outOffset = windowHeight - (windowHeight * ( 4 / 5));
+        let inOffset = windowHeight - (windowHeight * 0.4);
+        let outOffset = windowHeight - (windowHeight * 0.75);
 
         el.forEach((val, index) => {
             let bound = val.getBoundingClientRect();
-            if (bound.top <= inOffset && bound.top > -100 ) {
+            if (bound.top <= inOffset || bound.bottom <= outOffset ) {
                 val.classList.add('enter');
             } else {
                 val.classList.remove('enter')

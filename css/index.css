@@ -3,12 +3,13 @@
 /*  banner  */
 .banner {
     min-height: 65vh;
-    margin-top: 10vh;
+    margin: 10vh 0rem 2rem;
     width: 100%;
-    padding: 6% 3%;
+    padding: 15vh 1rem 1rem 1rem ;
     color: #eee;
     background: url('../images/banners/children.jpg') no-repeat fixed center / cover;
 }
+
 .section {
     display: flex;
     flex-direction: column;
@@ -18,13 +19,16 @@
 
 main > section > * {
     max-width: var(--max-width);
-    min-height: 80vh;
     padding: 1rem;
-    margin: 0 auto 1.5rem auto;    
+    margin: .5rem auto 2rem auto;    
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    box-shadow: 1px 1px 6px #ccc;
+}
+body, main, main > section, .galery {
+    background-color: #eee;
 }
 
 
@@ -42,6 +46,12 @@ main > section > * {
 .galery {
     background-color: rgb(224, 224, 224);
 } */
+
+.galery > div {
+    box-shadow: 1px 1px 6px #ccc;
+    margin-bottom: 2rem;
+} 
+
 .card-wrap {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -56,6 +66,8 @@ main > section > * {
     padding: .5rem;
     border-radius: var(--card-radius);
     position: relative;
+    background-color: #eee;
+    box-shadow: 0px 3px 8px #aaa;
 }
 
 .card figure {
@@ -66,7 +78,7 @@ main > section > * {
 .card p {
     overflow: hidden;
     text-overflow: ellipsis;
-    font-size: .875em;
+    font-size: .9.25em;
 }
 .card > a {
     background-color: transparent;
@@ -112,35 +124,21 @@ main > section > * {
 
 .galery > div {
     max-width: var(--max-width);
-    margin: auto;
+    margin: 1rem auto 2.5rem;
     padding: 1rem;
 }
 
 .galery-wrap {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, .75fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 2px;
 }
 /* .galery-wrap figure {
     width: 100%;
     max-height: 300px;
 } */
-.col-1 {
-    grid-column: 1 / span 2;
-}
-.col-2 {
-    grid-row: 1 / span 2;
-    grid-column: 3;
-}
-.row-2 {
-    grid-row: 2;
-    grid-column: 1;
-}
-.row-3 {
-    grid-row: 2;
-    grid-column: 2;
-}
+
+
 .galery-wrap img {
     border-radius: var(--card-radius);
 }
@@ -151,5 +149,32 @@ main > section > * {
     .comment-wrap {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
     }
+
+
+    .galery-wrap {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .galery-wrap > figure {
+        height: 100%;
+        max-height: 360px;
+    }
+
+    .col-1 {
+        grid-column: 1 / span 2;
+    }
+    .col-2 {
+        grid-row: 1 / span 3;
+        grid-column: 3;
+    }
+    .row-2 {
+        grid-row: 2;
+        grid-column: 1;
+    }
+    .row-3 {
+        grid-row: 2;
+        grid-column: 2 / span 2;
+    }
+
 }

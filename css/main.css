@@ -1,11 +1,11 @@
 
 
 :root {
-    --h1-size: 2em;
-    --h2-size: 1.75em;
-    --h3-size: 1.5em;
+    --h1-size: 2.8em;
+    --h2-size: 2em;
+    --h3-size: 1.6em;
     --h4-size: 1.3em;
-    --p-size: 1em;
+    --p-size: 1.1em;
     --card-radius: .25rem;
     --max-width: 1000px;
 
@@ -16,6 +16,7 @@
     --text-color: #99a;
     --white-color: #fff;
     --blue-violet: #933bf1;
+    --bg-black: #313b42;
 }
 
 
@@ -34,6 +35,10 @@
                 'Helvetica Neue', sans-serif;
     text-align: justify;
     line-height: 1.5em;
+}
+
+html {
+    font-size: 80%;
 }
 
 body > * {
@@ -73,6 +78,7 @@ header {
     padding: 0 1rem;
     background-color: var(--main-bg-color);
     z-index: 50;
+    border-bottom: 2px solid rgba(238, 238, 238, 0.726);
 }
 
 .top-nav, .menu {
@@ -91,7 +97,7 @@ header {
 
 .logo > a {
     color: var(--white-color);
-    font-size: var(--h1-size);
+    font-size: var(--h2-size);
     font-weight: 400;
 }
 
@@ -100,7 +106,7 @@ header {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    gap: 6px;
+    gap: .35rem;
     cursor: pointer;
 }
 
@@ -112,10 +118,10 @@ header {
 
 .menu {
     position: fixed;
-    height: 100vh;
+    height: 92vh;
     width:100%;
     top: 10vh;
-    transform: translateX(100%);
+    transform: translateX(110%);
     transition: transform 1s ease;
     left: 0;
 
@@ -169,23 +175,36 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: rgb(9, 17, 34);
+    background-color: var(--bg-black);
 }
 
 .footer-info {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    align-items: flex-start;
-    align-content: flex-start;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: .5rem;
     padding: 1.5rem 1rem;
     max-width: var(--max-width);
     color: var(--white-color);
     margin: auto;
     width: 100%;
-    min-height: 25vh;
+    justify-content: start;
+}
+.footer-info > div {
+    margin: 3% 0;
 }
 
+.footer-info address {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.footer-info address p {
+    margin-left: 0;
+}
+.footer-info > div > h3 {
+    text-align: left;
+    border-bottom: 1px solid #aaa;
+}
 
 .af-contact {
     display: grid;
@@ -195,6 +214,24 @@ footer {
 .af-contact > p > a, .icons > a {
     color: var(--white-color);
     font-weight: 300;
+}
+
+.f-social-media .icons a {
+    display: inline-block;
+    margin-right: .5rem;
+    width: 1.5rem;
+}
+
+.f-social-media .icons {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+.f-social-media .icons img {
+    width: 100%;
+    height: 100%;
 }
 
 .copyrights {
@@ -215,7 +252,7 @@ footer {
     
     .section {
         cursor: pointer;
-        transform: translateY(-50px);
+        transform: translateX(-50px);
         opacity: 0;
         transition: all 1s .2s ease;
     }
@@ -238,14 +275,34 @@ footer {
     }
 
     .section.enter {
-        transform: translateY(0);
+        transform: translateX(0);
         opacity: 1;
     }
 
     .section.leave {
-        transform: translateY(50px);
+        transform: translateX(50px);
         opacity: 0;
     }
+
+
+    .footer-info {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .f-social-media .icons {
+        justify-content: center;
+    }
+
+    .footer-info > div > h3 {
+        text-align: center;
+    }
+
+    .footer-info address p {
+        margin: auto;
+    }
+
+
 }
 
 
