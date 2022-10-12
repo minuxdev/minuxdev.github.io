@@ -366,7 +366,7 @@ footer {
         --h4-size: 1.2em;
         --p-size: 1.025em;
         --card-radius: .25rem;
-        --max-width: 750px;
+        --max-width: 1000px;
     }
 
     #toggle {display: none;}
