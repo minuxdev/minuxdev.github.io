@@ -6,7 +6,7 @@
     --h3-size: 1.4em;
     --h4-size: 1.2em;
     --p-size: 1em;
-    --card-radius: .25rem;
+    --card-radius: .2rem;
     --max-width: 750px;
 
     /*colors*/
@@ -39,6 +39,7 @@
 
 html {
     font-size: 90%;
+    scroll-behavior: smooth;
 }
 
 
