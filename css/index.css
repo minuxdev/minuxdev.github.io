@@ -2,41 +2,24 @@
 
 /*  banner  */
 .banner {
-    min-height: 45vh;
+    max-height: 40vh;
     margin: 10vh 0rem 2rem;
     width: 100%;
-    padding: 10vh 1rem 1rem 1rem ;
+    padding: 5%;
     color: #eee;
     background: url('../images/banners/children.jpg') no-repeat fixed center / cover;
 }
 
-
-
-
-
-
-/* .about {
-    background-color: rgb(245, 245, 245);
-    margin: 0;
+.banner > .section > p {
+    font-size: 1.1em;
+    text-align: center;
 }
-.services {
-    background-color: rgb(228, 228, 228);
-    margin: 0;
-}
-.comments {
-    background-color: rgb(233, 230, 230);
-}
-.galery {
-    background-color: rgb(224, 224, 224);
-} */
+
 
 .galery > div {
     box-shadow: 1px 1px 6px #ccc;
     margin-bottom: 2rem;
 } 
-
-
-
 
 
 .comment-wrap {

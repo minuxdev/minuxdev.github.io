@@ -1,13 +1,13 @@
 /*  MOBILE FIRST MAIN CSS FILE  */
 
 :root {
-    --h1-size: 2.8em;
-    --h2-size: 2em;
-    --h3-size: 1.6em;
-    --h4-size: 1.3em;
-    --p-size: 1.1em;
+    --h1-size: 1.8em;
+    --h2-size: 1.6em;
+    --h3-size: 1.4em;
+    --h4-size: 1.2em;
+    --p-size: 1em;
     --card-radius: .25rem;
-    --max-width: 1000px;
+    --max-width: 750px;
 
     /*colors*/
     --main-bg-color: #23232c;
@@ -15,8 +15,8 @@
     --title-color: #fff;
     --text-color: #99a;
     --white-color: #fff;
-    --blue-violet: #a66df1;
-    --bg-black: #313b42;
+    --blue-violet: #6b7179;
+    --bg-black: #354652;
 }
 
 
@@ -35,11 +35,10 @@
                 'Helvetica Neue', sans-serif;
     text-align: justify;
     line-height: 1.5em;
-    white-space: break-word;
 }
 
 html {
-    font-size: 80%;
+    font-size: 90%;
 }
 
 
@@ -48,6 +47,7 @@ body, main, main > section, .galery {
 }
 
 /*  TEXT    */
+h1, h2, h3, h4, h5 {font-weight: 600;}
 h1 {
     font-size: var(--h1-size);
     margin: 1rem auto;
@@ -111,12 +111,12 @@ header {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    gap: .35rem;
+    gap: .3rem;
     cursor: pointer;
 }
 
 #toggle > div {
-    height: .2rem;
+    height: .15rem;
     width: 1.8rem;
     background-color: #eee;
 }
@@ -164,12 +164,10 @@ header {
     width: 100%;
     gap: 1.2rem;
 }
-h1 {
-    font-weight: 600;
-}
+
 .banner > div > p, 
 .banner > div > a {
-    font-size: 1.3em;
+    font-size: 1em;
 }
 
 
@@ -348,11 +346,28 @@ footer {
     font-weight: 400;
 }
 
+.comments {
+    max-width: var(--max-width);
+    margin: auto;
+}
 
+.art-header > * {
+    color: #ddd
+}
 
 
 /*  MEDIA QUERIES   */
 @media screen and (min-width: 768px) {
+    :root {
+        --h1-size: 2em;
+        --h2-size: 1.6em;
+        --h3-size: 1.4em;
+        --h4-size: 1.2em;
+        --p-size: 1.025em;
+        --card-radius: .25rem;
+        --max-width: 750px;
+    }
+
     #toggle {display: none;}
 
 

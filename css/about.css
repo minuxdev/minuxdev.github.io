@@ -2,10 +2,10 @@
 
 /*  banner  */
 .banner {
-    min-height: 65vh;
+    min-height: 40vh;
     margin: 10vh 0rem 2rem;
     width: 100%;
-    padding: 15vh 1rem 1rem 1rem ;
+    padding: 10%;
     color: #eee;
     background: url('../images/banners/inf-banner.jpg') no-repeat fixed center / cover;
 }
@@ -14,7 +14,10 @@
 .banner > div > p {
     color: #ddd
 }
-
+.banner > .section > p {
+    font-size: 1.1em;
+    text-align: center;
+}
 
 
 .about-wrapper {
@@ -92,14 +95,14 @@
     }
 
     .about-wrapper > * {
-        min-width: 240px;
-        width: 31.75%;
+        width: 31.5%;
+        min-height: 20rem;
+        height: 100%;
         margin: 0 auto;
-        min-height: 300px;
     }
     
 
-    .comments {margin: 6% 2%;}
+    .comments {margin: 6% auto; max-width: var(--max-width);}
     .comment-wrap {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
