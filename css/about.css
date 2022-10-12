@@ -5,7 +5,7 @@
     min-height: 40vh;
     margin: 10vh 0rem 2rem;
     width: 100%;
-    padding: 10%;
+    padding: 5%;
     color: #eee;
     background: url('../images/banners/inf-banner.jpg') no-repeat fixed center / cover;
 }
@@ -49,6 +49,7 @@
     gap: 10px;
 }
 .comments {margin: 10% 4%;}
+
 
 .comment {
     padding: .5rem .75em;

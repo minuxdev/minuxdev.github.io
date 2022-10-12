@@ -2,7 +2,7 @@
 
 /*  banner  */
 .banner {
-    max-height: 40vh;
+    max-height: 45vh;
     margin: 10vh 0rem 2rem;
     width: 100%;
     padding: 5%;
@@ -68,7 +68,10 @@
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: auto;
     }
-
+    .comments > div {
+        margin: 0;
+        width: 100%;
+    }
 
     .galery-wrap {
         grid-template-columns: repeat(3, 1fr);
