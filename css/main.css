@@ -1,4 +1,4 @@
-
+/*  MOBILE FIRST MAIN CSS FILE  */
 
 :root {
     --h1-size: 2.8em;
@@ -10,12 +10,12 @@
     --max-width: 1000px;
 
     /*colors*/
-    --main-bg-color: #44a9fc;
+    --main-bg-color: #23232c;
     --alt-bg-color: #2188de;
     --title-color: #fff;
     --text-color: #99a;
     --white-color: #fff;
-    --blue-violet: #933bf1;
+    --blue-violet: #a66df1;
     --bg-black: #313b42;
 }
 
@@ -35,16 +35,19 @@
                 'Helvetica Neue', sans-serif;
     text-align: justify;
     line-height: 1.5em;
+    white-space: break-word;
 }
 
 html {
     font-size: 80%;
 }
 
-body > * {
-    width: 100%;
+
+body, main, main > section, .galery {
+    background-color: #eee;
 }
 
+/*  TEXT    */
 h1 {
     font-size: var(--h1-size);
     margin: 1rem auto;
@@ -70,6 +73,8 @@ p {
 
 img {width: 100%; height: 100%; object-fit: cover;}
 
+
+/*  HEADER  */
 header {
     position: fixed;
     top: 0;
@@ -78,7 +83,7 @@ header {
     padding: 0 1rem;
     background-color: var(--main-bg-color);
     z-index: 50;
-    border-bottom: 2px solid rgba(238, 238, 238, 0.726);
+    border-bottom: 1px solid #777;
 }
 
 .top-nav, .menu {
@@ -111,8 +116,8 @@ header {
 }
 
 #toggle > div {
-    height: 2px;
-    width: 28px;
+    height: .2rem;
+    width: 1.8rem;
     background-color: #eee;
 }
 
@@ -140,7 +145,7 @@ header {
 
 .menu a {
     color: var(--white-color);
-    font-size: 1.1em;
+    font-size: 1.2em;
 }
 
 .menu.active {
@@ -152,10 +157,105 @@ header {
 }
 
 
+/*  BANNER  */
+.banner > div {
+    max-width: 90vw;
+    margin: auto;
+    width: 100%;
+    gap: 1.2rem;
+}
+h1 {
+    font-weight: 600;
+}
+.banner > div > p, 
+.banner > div > a {
+    font-size: 1.3em;
+}
 
+
+/*  ANIMATION WRAPPER  */
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*  MAIN SECTIONS   */
+main > section > * {
+    max-width: var(--max-width);
+    width: 96%;
+    padding: 1rem;
+    margin: .5rem auto 2rem auto;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 1px 1px 6px #ccc;
+    border-radius: var(--card-radius);
+}
+
+/* .art-header > * {
+    color: var(--white-color)
+} */
+
+
+/*  GALERY  */
+.galery > div {
+    max-width: var(--max-width);
+    margin: 1rem auto 2.5rem;
+    padding: 1rem;
+    width: 96%;
+}
+
+
+
+/*  CARDS   */
+
+.card-wrap {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    margin-bottom: 1rem;
+}
+
+.card {
+
+    padding: .5rem;
+    border-radius: var(--card-radius);
+    position: relative;
+    background-color: #eee;
+    box-shadow: 0px 3px 8px #aaa;
+}
+
+.card figure {
+    width: 100%;
+    height: 16em;
+}
+.card  img {border-radius: var(--card-radius);}
+.card p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: .9.25em;
+}
+.card > a {
+    background-color: transparent;
+    color: var(--alt-bg-color);
+}
+.card h3 {
+    position: absolute;
+    bottom: 45%;
+    left: 30%;
+    text-align: center;
+    color: var(--title-color);
+    font-weight: 600;
+    font-size: 1.5em;
+}
 
 .card-btn {
-    display: inline-block;
+    display: block;
     color: var(--white-color);
     padding: .5rem 2.5rem;
     border: 2px solid transparent;
@@ -163,7 +263,8 @@ header {
     margin: .5rem auto;
     background-color: var(--alt-bg-color);
     transition: all .4s ease;
-    min-width: 200px;
+    max-width: max-content;
+    width: 100%;
     text-align: center;
 }
 .card-btn:hover {
@@ -171,6 +272,8 @@ header {
 }
 
 
+
+/*  FOOTER  */  
 footer {
     display: flex;
     flex-direction: column;
@@ -247,8 +350,19 @@ footer {
 
 
 
+
+/*  MEDIA QUERIES   */
 @media screen and (min-width: 768px) {
     #toggle {display: none;}
+
+
+    .banner > div {
+        max-width: 60vw;
+    }
+
+    .card-btn {
+        max-width: 200px;
+    }
     
     .section {
         cursor: pointer;
@@ -264,9 +378,6 @@ footer {
         height: auto;
         width: auto;
         transform: translateX(0);
-
-
-        
     }
     .menu li {
         margin: 1.5rem;
@@ -299,8 +410,12 @@ footer {
     }
 
     .footer-info address p {
+        text-align: center;
         margin: auto;
     }
+
+
+    
 
 
 }

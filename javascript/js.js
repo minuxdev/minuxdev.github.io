@@ -1,5 +1,5 @@
 
-
+window.addEventListener('load', () => {
 
 function toggleMenu(toggleBtn, containerMenu, listItems, animationName) {
     /**
@@ -28,10 +28,8 @@ function toggleMenu(toggleBtn, containerMenu, listItems, animationName) {
 
 }
 
-
 function onScrollAnimation(selector) {
     document.addEventListener('scroll', () => {
-
         let el = document.querySelectorAll(selector);
         let windowHeight = window.innerHeight;
         let inOffset = windowHeight - (windowHeight * 0.4);
@@ -48,9 +46,12 @@ function onScrollAnimation(selector) {
     })
 }
 
+
+
 onScrollAnimation('.section');
 
 toggleMenu(
     '#toggle', '.menu', '.menu li', 'fadeIn'
 );
+})
 
