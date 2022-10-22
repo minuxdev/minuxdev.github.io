@@ -3,7 +3,7 @@
 
 :root {
     --white-text: #fff;
-    --content-padding: 2rem;
+    --content-padding: 2.5rem;
     --section-heading: 3rem;
     --heading-margin: 1.5rem;
     --section-paragraph: 1.1rem
@@ -21,13 +21,11 @@
     list-style: none;
     transition: all .5s ease;
     letter-spacing: 1px;
-
 }
 
 
 body {
     background-color: #12121f;
-    height: 200vh;
 }
 
 .container {
@@ -44,7 +42,8 @@ header,
 .banner,
 .sidebar,
 .sidebar ul,
-.about
+.about,
+.service-cards 
 {
     display: flex;
     align-items: center;
@@ -62,7 +61,7 @@ header {
     justify-content: space-between;
 }
 header.sticky {
-    padding: 1rem;
+    padding: 1rem 2.5rem;
     background-color: #12121fef;
 }
 
@@ -181,3 +180,42 @@ header .toggle.active {
     height: 100%;
 }
 
+/* SERVICES */
+
+.services {
+    width: 100%;
+    text-align: center;
+    background-color: #12121f;
+    margin-top: 2rem;
+}
+
+.service-content{
+    width: 60%;
+    padding: 1.5rem;
+    margin: 0 auto;
+}
+.services .service-cards {
+    width: 100%;
+    margin-top: 2.5rem;
+    justify-content: space-around;
+    padding: var(--content-padding);
+}
+
+.card {
+    width: 24%;
+    height: 350px; 
+    background-color: var(--white-text);
+}
+.card-image {
+    width: 100%;
+    height: 280px;
+}
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card-title {
+    padding: 1rem;
+    margin: .5rem;
+}
