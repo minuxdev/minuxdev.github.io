@@ -14,20 +14,32 @@
     font-family: 'Nunito Sans', sans-serif;
     text-decoration: none;
     position: relative;
+    list-style: none;
+    transition: all .5s ease;
 }
 
 
 body {
     background-color: #12121f;
+    height: 200vh;
+}
+
+.container {
+    left: 0;
+    transition: all .5s ease;
+}
+.container.active {
+    left: -400px;
 }
 
 
 /* DISPLAY FLEX */
 header,
-.banner 
+.banner,
+.sidebar,
+.sidebar ul
 {
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
@@ -40,6 +52,11 @@ header {
     width: 100%;
     padding: 2.5rem;
     z-index: 1000;
+    justify-content: space-between;
+}
+header.sticky {
+    padding: 1rem;
+    background-color: #12121fef;
 }
 
 header .logo {
@@ -55,6 +72,9 @@ header .toggle {
     background-image: url('images/toggle.png');
     background-size: cover;
     cursor: pointer;
+}
+header .toggle.active {
+    background-image: url('images/close.png');
 }
 
 /* BANNER */
@@ -85,4 +105,41 @@ header .toggle {
 }
 .banner .banner-content p {
     font-size: 1.25rem;
+}
+
+
+/* SIDEBAR */
+.sidebar {
+    position: fixed;
+    width: 400px;
+    top: 0;
+    right: -400px;
+    height: 100%;
+    background-color: #12121f;
+    justify-content: center;
+    z-index: 999;
+}
+.sidebar.active {
+    right: 0;
+}
+
+.sidebar ul {
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.sidebar ul li  {
+    margin: 1.2rem 0;
+    padding: .5rem;
+}
+.sidebar ul li a {
+    color: var(--white-text);
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+.sidebar ul li:hover {
+    transform: translateX(8px);
+}
+.sidebar ul li a:hover {
+    color: #134db8;
 }

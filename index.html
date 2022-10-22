@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Webpage 1</title>
     <link rel="stylesheet" href="style.css">
+    <script src="javascript/script.js"></script>
 </head>
 <body>
     
@@ -13,8 +14,21 @@
 
         <header>
             <a href="#" class="logo">IE.LDA</a>
-            <div class="toggle"></div>
+            <div class="toggle" onclick="toggleControl('.toggle','.container','.sidebar');"></div>
         </header>
+
+        <nav class="sidebar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Clients</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#">Contacts</a></li>
+            </ul>
+        </nav>
+
         <section class="banner">
             <img src="images/bg.jpg" alt="background">
             <section class="banner-content">
@@ -28,6 +42,12 @@
     </div>
 
 
+    <script>
+
+        headerSticky('header');
+
+        
+    </script>
 
 </body>
 </html>
