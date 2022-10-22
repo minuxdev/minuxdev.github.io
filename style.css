@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700;800&family=Poppins:ital,wght@0,100;1,100&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,400&display=swap');
 
-
+html {
+    scroll-behavior: smooth;
+}
 :root {
     --white-text: #fff;
     --content-padding: 2.5rem;
@@ -45,7 +47,9 @@ header,
 .about,
 .service-cards,
 .tecnology,
-.tecnology-cards
+.tecnology-cards,
+.clients,
+.client-cards
 {
     display: flex;
     align-items: center;
@@ -88,12 +92,13 @@ header .toggle.active {
 
 /* GROUPING SECTIONS */
 .about,
-.tecnology 
+.tecnology,
+.clients
 {
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    min-height: 100vh;
+    height: 100vh;
 }
 
 
@@ -198,6 +203,7 @@ header .toggle.active {
     text-align: center;
     background-color: #12121f;
     margin-top: 2rem;
+    height: 100vh;
 }
 
 .service-content,
@@ -218,8 +224,9 @@ header .toggle.active {
     width: 24.5%;
     flex-basis: 300px;
     height: 350px; 
-    background-color: var(--white-text);
+    background-color: #134db8;
     margin: .6rem auto;
+    color: var(--white-text)
 }
 .card-image {
     width: 100%;
@@ -245,20 +252,26 @@ header .toggle.active {
     padding: var(--content-padding);
 }
 .tecnology-content {
-    width: 60%;
+    width: 55%;
 }
 .tecnology-cards {
-    width: 40%;
+    width: 45%;
     justify-content: center;
 }
 .tecnology-cards .card {
     width: 50%;
-    height: 280px;
+    height: 260px;
+    padding: 5px;
 }
 .tecnology-cards .card-image {
-    height: 220px;
+    height: 200px;
 }
-
+.tecnology-cards .card-image img {
+    filter: invert(1);
+}
+.card {
+    border-radius: 5px;
+}
 .tecnology-image {
     position: absolute;
     width: 100%;
@@ -271,4 +284,39 @@ header .toggle.active {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+
+/* CLIENTS */
+.clients {
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+.client-cards {
+    width: 90%;
+    margin: .5rem auto;
+}
+.client-cards .card {
+    background-color: #12121f;
+    width: 25%;
+}
+.client-cards .card .card-image {
+    width: 100%;
+    height: 100%;
+}
+.client-cards .card .card-image img {
+    width: 100%;
+    max-width: 240px;
+    object-fit: contain;
+    opacity: .4;
+}
+.client-cards .card .card-image img:hover {
+    opacity: 1;
+    transform: scale(1.3);
+}
+.client-content {
+    width: 70%;
+    margin: auto;
+    text-align: center;
 }
