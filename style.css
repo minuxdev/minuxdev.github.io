@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700;800&family=Poppins:ital,wght@0,100;1,100&display=swap');
+
+
+:root {
+    --white-text: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    position: relative;
+}
+
+
+body {
+    background-color: #12121f;
+}
+
+
+/* DISPLAY FLEX */
+header,
+.banner 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* HEADER */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2.5rem;
+    z-index: 1000;
+}
+
+header .logo {
+    color: var(--white-text);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+header .toggle {
+    height: 1.5rem;
+    width: 2rem;
+    background-image: url('images/toggle.png');
+    background-size: cover;
+    cursor: pointer;
+}
+
+/* BANNER */
+.banner {
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    
+}
+.banner img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.banner .banner-content {
+    max-width: 700px;
+    text-align: center;
+    color: var(--white-text);
+}
