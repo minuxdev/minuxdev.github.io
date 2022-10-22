@@ -11,12 +11,12 @@
 <body>
     
     <div class="container">
-
+        <!-- HEADER -->
         <header>
             <a href="#" class="logo">IE.LDA</a>
             <div class="toggle" onclick="toggleControl('.toggle','.container','.sidebar');"></div>
         </header>
-
+        <!-- SIDEBAR -->
         <nav class="sidebar">
             <ul>
                 <li><a href="#">Home</a></li>
@@ -28,16 +28,33 @@
                 <li><a href="#">Contacts</a></li>
             </ul>
         </nav>
-
+        <!-- BANNER -->
         <section class="banner">
             <img src="images/bg.jpg" alt="background">
             <section class="banner-content">
-                <h2>Informatica e Electricidade</h2>
-                <p>
+                <h2 class="section-heading">Informatica e Electricidade</h2>
+                <p class="section-text">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat exercitationem dolorum cumque reprehenderit. Nostrum sequi consequatur quibusdam culpa expedita. Nulla assumenda in officiis possimus. Praesentium ipsa quae vel iste dolor.
                 </p>
             </section>
         </section>
+
+        <!-- ABOUT -->
+        <section class="about">
+            <div class="about-content">
+                <h2 class="section-heading">Um pouco sobre a IE.LDA</h2>
+                <p class="section-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, eius! Atque laudantium iusto dolor modi debitis eveniet facilis animi molestias doloremque, quia reiciendis voluptatum sapiente alias asperiores vel ea omnis minus esse ut, rerum tempore excepturi autem! Atque laudantium exercitationem nulla dolores, mollitia dolorem cum. Temporibus vitae sapiente assumenda ratione.
+                </p>
+                <p class="section-text">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto sapiente unde sunt nam ratione iste natus sint impedit asperiores nisi quaerat consequatur recusandae cupiditate laboriosam in, laborum saepe minima, quam ipsa distinctio veritatis eveniet.
+                </p>
+            </div>
+            <figure class="about-image">
+                <img src="images/tec-el.jpg" alt="ie.lda tecnic">
+            </figure>
+        </section>
+
 
     </div>
 
@@ -46,7 +63,7 @@
 
         headerSticky('header');
 
-        
+
     </script>
 
 </body>
