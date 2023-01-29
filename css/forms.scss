@@ -1,0 +1,53 @@
+@import 'base.scss';
+
+
+/* Forms */ 
+.form {
+    margin: 2rem auto;
+
+
+    form {
+        max-width: 32rem;
+        width: 95%;
+        margin: 2rem auto;
+        .category__selector {
+            margin-top: .5rem;
+            select {
+                min-width: 50%;
+                padding: .6rem;
+                color: var(--secondary-bg);
+                border-radius: var(--radius);
+                border: none;
+            }
+            a { 
+                color: var(--secondary-title);
+                background: var(--primary-bg);
+                font-weight: 500;
+                box-shadow: var(--shadow);
+            }
+        }
+
+        label {
+            margin: 1rem 0;
+            color: var(--primary-body-color);
+            font-weight: 500;
+            display: block;
+            
+            input, textarea {
+                display: block; 
+                width: 100%;
+                padding: .5rem 1rem;
+                margin-top: .5rem;
+                resize: vertical;
+                border-radius: var(--radius);
+                border: none;
+            }
+        }
+        .submit-btn {
+            padding: .5rem 2rem;
+            color: var(--primary-bg);
+        }
+        input, textarea { font-size: 1rem;}
+
+        }
+}

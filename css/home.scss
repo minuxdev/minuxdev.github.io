@@ -1,0 +1,118 @@
+@import "base.scss";
+
+
+/* user info */
+
+.user__info {
+    margin: 1.5rem auto;
+    .info {
+        h1 { 
+            font-size: 1.4rem;
+            color: var(--primary-title);
+            padding: .5rem;
+            min-width: 50%;
+        }
+
+        .horizontal__line {
+            height: 3px;
+            width: 100%;
+            opacity: .1;
+            margin-bottom: .5rem;
+            background: linear-gradient(var(--secondary-title), var(--primary-title));
+        }
+
+        ul { 
+            li a { color: var(--primary-body-color); }                
+        }
+    }
+
+    .user__image {
+        margin-left: 2rem;
+        max-width: 6rem;
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        background: var(--primary-dark-color);
+        padding: .2rem;
+    }
+}
+
+
+
+/* HOME */ 
+.main {
+    margin: 2rem auto;
+
+    /* Main content */
+    .main__content {
+        margin: 1rem auto;
+
+        .category__selector {
+            select {
+                min-width: 50%;
+                padding: .6rem;
+                color: var(--secondary-bg);
+                border-radius: var(--radius);
+                border: none;
+            }
+            a { 
+                color: var(--secondary-title);
+                background: var(--primary-bg);
+                font-weight: 500;
+                box-shadow: var(--shadow);
+            }
+        }
+        
+        .content {
+            li {
+                display: grid;
+                gap: 1rem;
+                margin: .4rem 0;
+                a {
+                    color: var(--primary-body-color);
+                }
+                p {
+                    margin-left: auto;
+                    font-size: .75rem;
+                    font-weight:lighter;
+                    color: var(--primary-title);
+                    opacity: .6;
+                }
+            }
+        }
+
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    .user__info { 
+        display: none;
+        .user__info__wrapper {
+            width: 50%;
+            margin-left: auto;
+        }
+    }
+
+    .main {
+        .main__content {
+            .category__selector { 
+                width: 50%;
+                margin: auto 0 auto auto;
+            }
+
+            .content {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+                gap: var(--flex-gap);
+                margin: 1rem 0;
+
+                li { margin: 0; }
+            }
+
+        }
+    }
+}
+
+
+
