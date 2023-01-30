@@ -4,10 +4,10 @@
 /* user info */
 
 .user__info {
-    margin: 1.5rem auto;
+    margin: 4rem auto;
     .info {
         h1 { 
-            font-size: 1.4rem;
+            font-size: clamp(1.2rem, 1.0rem + 1vw, 2rem);
             color: var(--primary-title);
             padding: .5rem;
             min-width: 50%;
@@ -27,7 +27,7 @@
     }
 
     .user__image {
-        margin-left: 2rem;
+        margin-left: 1rem;
         max-width: 6rem;
         width: 100%;
         aspect-ratio: 1 / 1;
@@ -40,6 +40,33 @@
 
 
 /* HOME */ 
+
+.banner {
+    margin: 4rem auto;
+
+    .banner__content {
+        padding: 2rem 0;        
+        max-width: 32rem;
+        margin-right: auto;
+
+        h1 {
+            font-size: clamp(2.6rem , 2rem + 2vw, 5rem);
+            margin-bottom: 1.2rem;
+            letter-spacing: 2px;
+            line-height: clamp(3rem, 2.5rem + 2vw, 5.5rem);
+            color: var(--primary-title);
+        }
+        a {
+            display: inline-block;
+            border: 2px solid var(--primary-title);
+            margin: 1.4rem 0;
+            box-shadow: var(--shadow);
+            color: var(--primary-title);
+        }
+    }
+}
+
+
 .main {
     margin: 2rem auto;
 
@@ -76,7 +103,8 @@
                     font-size: .75rem;
                     font-weight:lighter;
                     color: var(--primary-title);
-                    opacity: .6;
+                    opacity: .8;
+                    font-style: italic;
                 }
             }
         }
@@ -98,7 +126,7 @@
         .main__content {
             .category__selector { 
                 width: 50%;
-                margin: auto 0 auto auto;
+                margin: 4rem 0 auto auto;
             }
 
             .content {

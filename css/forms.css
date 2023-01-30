@@ -31,7 +31,7 @@ body {
 .size__control {
   max-width: var(--max-width);
   margin: auto;
-  width: 95%;
+  width: 90%;
 }
 
 .section__wrapper {
@@ -42,9 +42,11 @@ body {
 }
 
 .btn {
-  padding: 0.4rem 1rem;
+  padding: 0.5rem 1.5rem;
   border: 2px solid transparent;
   border-radius: var(--radius);
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 .flex__display {
@@ -65,8 +67,9 @@ header {
   margin-bottom: 4rem;
 }
 header .main__nav .logo {
-  font-size: 2.5rem;
+  font-size: clamp(2.4rem, 2rem + 2vw, 3.2rem);
   color: var(--primary-title);
+  position: relative;
 }
 header .main__nav .search__form {
   display: inline-flex;
@@ -88,7 +91,7 @@ header .main__nav .search__form button img {
 }
 header .main__nav .toggle {
   cursor: pointer;
-  min-width: 2rem;
+  width: 2rem;
   z-index: 100;
 }
 header .main__nav .toggle > * {
@@ -104,19 +107,33 @@ header .main__nav toggle.active:nth-child(1) {
 }
 header .main__nav .main__menu {
   display: flex;
-  gap: 2rem;
   flex-direction: column;
+  align-items: center;
+  gap: 2rem;
   position: absolute;
   top: 0;
   right: 0;
   width: 75%;
+  padding-top: 20%;
   height: 100vh;
-  padding: 45% 25%;
   background: var(--secondary-bg);
-  display: none;
+}
+header .main__nav .main__menu a {
+  color: var(--secondary-title);
+}
+header .main__nav .main__menu .signup-btn, header .main__nav .main__menu .login-btn {
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+}
+header .main__nav .main__menu .signup-btn {
+  background: var(--primary-title);
+  color: var(--primary-bg);
+}
+header .main__nav .main__menu .login-btn {
+  border-color: var(--primary-title);
 }
 
-a, p {
+a, p, label {
   line-height: 1.5rem;
   letter-spacing: 0.06rem;
 }
@@ -126,52 +143,142 @@ select {
   font-size: 1rem;
 }
 
+@media screen and (min-width: 800px) {
+  header .main__nav .toggle {
+    display: none;
+  }
+  header .main__nav .main__menu {
+    flex-direction: row;
+    gap: 1rem;
+    position: relative;
+    top: auto;
+    right: auto;
+    width: auto;
+    padding-top: 0;
+    height: auto;
+    background: transparent;
+  }
+  header .main__nav .main__menu a {
+    color: var(--secondary-title);
+  }
+  header .main__nav .main__menu .signup-btn, header .main__nav .main__menu .login-btn {
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+  }
+  header .main__nav .main__menu .signup-btn {
+    background: var(--primary-title);
+    color: var(--primary-bg);
+  }
+  header .main__nav .main__menu .login-btn {
+    border-color: var(--primary-title);
+  }
+}
 /* Forms */
-.form {
-  margin: 2rem auto;
+.form__wrapper {
+  display: grid;
+  margin: 15% auto;
+  gap: 1rem;
+  width: 90%;
+  padding: 2rem;
 }
-.form form {
-  max-width: 32rem;
-  width: 95%;
-  margin: 2rem auto;
+.form__wrapper .form__side {
+  color: var(--primary-title);
+  font-size: clamp(1.2rem, 1.2rem + 1vw, 3.5rem);
+  margin-bottom: 2rem;
 }
-.form form .category__selector {
-  margin-top: 0.5rem;
+.form__wrapper form {
+  color: var(--secondary-title);
 }
-.form form .category__selector select {
+.form__wrapper form h1 {
+  font-size: clamp(1.6rem, 1.5rem + 2vw, 4rem);
+  margin-bottom: 2.5rem;
+}
+.form__wrapper form .category__selector select {
   min-width: 50%;
   padding: 0.6rem;
   color: var(--secondary-bg);
   border-radius: var(--radius);
   border: none;
 }
-.form form .category__selector a {
+.form__wrapper form .category__selector a {
   color: var(--secondary-title);
   background: var(--primary-bg);
   font-weight: 500;
   box-shadow: var(--shadow);
 }
-.form form label {
-  margin: 1rem 0;
-  color: var(--primary-body-color);
-  font-weight: 500;
+.form__wrapper form label {
   display: block;
+  margin-bottom: 1rem;
+  font-weight: 600;
 }
-.form form label input, .form form label textarea {
-  display: block;
+.form__wrapper form label input, .form__wrapper form label textarea {
   width: 100%;
+  font-size: 1rem;
+  margin: 0.5rem 0;
   padding: 0.5rem 1rem;
-  margin-top: 0.5rem;
-  resize: vertical;
+  color: var(--secondary-dark-color);
   border-radius: var(--radius);
   border: none;
 }
-.form form .submit-btn {
-  padding: 0.5rem 2rem;
-  color: var(--primary-bg);
+.form__wrapper form .input__group {
+  gap: 1rem;
+  margin: 1rem 0;
 }
-.form form input, .form form textarea {
-  font-size: 1rem;
+.form__wrapper form .input__group span {
+  opacity: 0.6;
+}
+.form__wrapper form .input__group a {
+  text-decoration: underline;
+  color: var(--primary-title);
+  opacity: 0.6;
+}
+.form__wrapper form .submit-btn {
+  color: var(--secondary-bg);
+  background: var(--secondary-title);
+  margin: 1rem 0;
+}
+
+@media screen and (min-width: 768px) {
+  .form__wrapper {
+    margin-top: 10%;
+    padding: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .form__wrapper .form__side {
+    justify-content: center;
+    border-right: 4px solid rgba(216, 222, 233, 0.062745098);
+    margin: 0;
+  }
+  .form__wrapper .form__side h1 {
+    max-width: 12rem;
+    margin: auto;
+  }
+  .form__wrapper form {
+    margin-left: 1rem;
+  }
+  .form__wrapper form .input__group {
+    display: block;
+  }
+  .form__wrapper form .flex__group {
+    display: flex;
+  }
+  .form__wrapper .create__form {
+    margin-left: 0;
+  }
+  .form__wrapper .create__form {
+    grid-column: 1/3;
+  }
+}
+@media screen and (min-width: 950px) {
+  .form__wrapper {
+    padding: 4rem;
+  }
+  .form__wrapper form {
+    margin-left: 3rem;
+  }
+  .form__wrapper form .input__group {
+    display: flex;
+  }
 }
 
 /*# sourceMappingURL=forms.css.map */

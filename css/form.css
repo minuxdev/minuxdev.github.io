@@ -31,7 +31,7 @@ body {
 .size__control {
   max-width: var(--max-width);
   margin: auto;
-  width: 90%;
+  width: 95%;
 }
 
 .section__wrapper {
@@ -42,11 +42,9 @@ body {
 }
 
 .btn {
-  padding: 0.5rem 1.5rem;
+  padding: 0.4rem 1rem;
   border: 2px solid transparent;
   border-radius: var(--radius);
-  font-size: 1rem;
-  font-weight: 600;
 }
 
 .flex__display {
@@ -67,9 +65,8 @@ header {
   margin-bottom: 4rem;
 }
 header .main__nav .logo {
-  font-size: clamp(2.4rem, 2rem + 2vw, 3.2rem);
+  font-size: 2.5rem;
   color: var(--primary-title);
-  position: relative;
 }
 header .main__nav .search__form {
   display: inline-flex;
@@ -91,7 +88,7 @@ header .main__nav .search__form button img {
 }
 header .main__nav .toggle {
   cursor: pointer;
-  width: 2rem;
+  min-width: 2rem;
   z-index: 100;
 }
 header .main__nav .toggle > * {
@@ -107,33 +104,19 @@ header .main__nav toggle.active:nth-child(1) {
 }
 header .main__nav .main__menu {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: 2rem;
+  flex-direction: column;
   position: absolute;
   top: 0;
   right: 0;
   width: 75%;
-  padding-top: 20%;
   height: 100vh;
+  padding: 45% 25%;
   background: var(--secondary-bg);
-}
-header .main__nav .main__menu a {
-  color: var(--secondary-title);
-}
-header .main__nav .main__menu .signup-btn, header .main__nav .main__menu .login-btn {
-  padding: 0.5rem 1rem;
-  font-weight: 500;
-}
-header .main__nav .main__menu .signup-btn {
-  background: var(--primary-title);
-  color: var(--primary-bg);
-}
-header .main__nav .main__menu .login-btn {
-  border-color: var(--primary-title);
+  display: none;
 }
 
-a, p, label {
+a, p {
   line-height: 1.5rem;
   letter-spacing: 0.06rem;
 }
@@ -143,35 +126,54 @@ select {
   font-size: 1rem;
 }
 
-@media screen and (min-width: 800px) {
-  header .main__nav .toggle {
-    display: none;
-  }
-  header .main__nav .main__menu {
-    flex-direction: row;
-    gap: 1rem;
-    position: relative;
-    top: auto;
-    right: auto;
-    width: auto;
-    padding-top: 0;
-    height: auto;
-    background: transparent;
-  }
-  header .main__nav .main__menu a {
-    color: var(--secondary-title);
-  }
-  header .main__nav .main__menu .signup-btn, header .main__nav .main__menu .login-btn {
-    padding: 0.5rem 1rem;
-    font-weight: 500;
-  }
-  header .main__nav .main__menu .signup-btn {
-    background: var(--primary-title);
-    color: var(--primary-bg);
-  }
-  header .main__nav .main__menu .login-btn {
-    border-color: var(--primary-title);
-  }
+/* Forms */
+.form__wrapper {
+  display: grid;
+}
+.form__wrapper .form {
+  margin: 2rem auto;
+}
+.form__wrapper .form form {
+  width: 90%;
+  margin: 2rem auto;
+}
+.form__wrapper .form form .category__selector {
+  margin-top: 0.5rem;
+}
+.form__wrapper .form form .category__selector select {
+  min-width: 50%;
+  padding: 0.6rem;
+  color: var(--secondary-bg);
+  border-radius: var(--radius);
+  border: none;
+}
+.form__wrapper .form form .category__selector a {
+  color: var(--secondary-title);
+  background: var(--primary-bg);
+  font-weight: 500;
+  box-shadow: var(--shadow);
+}
+.form__wrapper .form form label {
+  margin: 1rem 0;
+  color: var(--primary-body-color);
+  font-weight: 500;
+  display: block;
+}
+.form__wrapper .form form label input, .form__wrapper .form form label textarea {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  margin-top: 0.5rem;
+  resize: vertical;
+  border-radius: var(--radius);
+  border: none;
+}
+.form__wrapper .form form .submit-btn {
+  padding: 0.5rem 2rem;
+  color: var(--primary-bg);
+}
+.form__wrapper .form form input, .form__wrapper .form form textarea {
+  font-size: 1rem;
 }
 
-/*# sourceMappingURL=base.css.map */
+/*# sourceMappingURL=form.css.map */

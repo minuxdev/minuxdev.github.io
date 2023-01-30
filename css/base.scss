@@ -42,7 +42,7 @@ body {
 .size__control {
     max-width: var(--max-width);
     margin: auto;
-    width: 95%;
+    width: 90%;
 }
 
 
@@ -55,10 +55,11 @@ body {
 
 
 .btn {
-    padding: .4rem 1rem;
+    padding: .5rem 1.5rem;
     border: 2px solid transparent;
     border-radius: var(--radius);
-    
+    font-size: 1rem;   
+    font-weight: 600;
 }
 
 
@@ -81,8 +82,9 @@ header {
 
     .main__nav {
         .logo {
-            font-size: 2.5rem;    
+            font-size: clamp(2.4rem, 2rem + 2vw, 3.2rem);    
             color: var(--primary-title);
+            position: relative;
         }
         .search__form {
             display: inline-flex;
@@ -106,7 +108,7 @@ header {
 
         .toggle {
             cursor: pointer;
-            min-width: 2rem;
+            width: 2rem;
             z-index: 100;
             & > * {
                 background-color: var(--secondary-body-color);
@@ -122,23 +124,36 @@ header {
 
         .main__menu {
             display: flex;
-            gap: 2rem;
             flex-direction: column;
+            align-items: center;
+            gap: 2rem;
             position: absolute;
             top: 0;
             right: 0;
             width: 75%;
+            padding-top: 20%;
             height: 100vh;
-            padding: 45% 25%;
             background: var(--secondary-bg);
+            a { color: var(--secondary-title); }
+            
+            .signup-btn, .login-btn {
+                padding: .5rem 1rem;
+                font-weight: 500;
+            }
+            .signup-btn {
+                background: var(--primary-title);
+                color: var(--primary-bg);
+            }
+            .login-btn {
+                border-color: var(--primary-title);
+            }
 
-            display: none;
         }
     }
 }
 
 
-a, p { 
+a, p, label { 
     line-height: 1.5rem ;
     letter-spacing: .06rem;
 }
@@ -149,4 +164,37 @@ select {
 }
 
 
+@media screen and (min-width: 800px) {
+    header .main__nav {
+        .toggle {
+            display: none;
+        }
 
+        .main__menu {
+            flex-direction: row;
+            gap: 1rem;
+            position: relative;
+            top: auto;
+            right: auto;
+            width: auto;
+            padding-top: 0;
+            height: auto;
+            background: transparent;
+
+            a { color: var(--secondary-title); }
+            
+            .signup-btn, .login-btn {
+                padding: .5rem 1rem;
+                font-weight: 500;
+            }
+            .signup-btn {
+                background: var(--primary-title);
+                color: var(--primary-bg);
+            }
+            .login-btn {
+                border-color: var(--primary-title);
+            }
+        }
+    }
+
+}

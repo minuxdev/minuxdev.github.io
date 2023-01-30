@@ -31,7 +31,7 @@ body {
 .size__control {
   max-width: var(--max-width);
   margin: auto;
-  width: 95%;
+  width: 90%;
 }
 
 .section__wrapper {
@@ -42,9 +42,11 @@ body {
 }
 
 .btn {
-  padding: 0.4rem 1rem;
+  padding: 0.5rem 1.5rem;
   border: 2px solid transparent;
   border-radius: var(--radius);
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 .flex__display {
@@ -65,8 +67,9 @@ header {
   margin-bottom: 4rem;
 }
 header .main__nav .logo {
-  font-size: 2.5rem;
+  font-size: clamp(2.4rem, 2rem + 2vw, 3.2rem);
   color: var(--primary-title);
+  position: relative;
 }
 header .main__nav .search__form {
   display: inline-flex;
@@ -88,7 +91,7 @@ header .main__nav .search__form button img {
 }
 header .main__nav .toggle {
   cursor: pointer;
-  min-width: 2rem;
+  width: 2rem;
   z-index: 100;
 }
 header .main__nav .toggle > * {
@@ -104,19 +107,33 @@ header .main__nav toggle.active:nth-child(1) {
 }
 header .main__nav .main__menu {
   display: flex;
-  gap: 2rem;
   flex-direction: column;
+  align-items: center;
+  gap: 2rem;
   position: absolute;
   top: 0;
   right: 0;
   width: 75%;
+  padding-top: 20%;
   height: 100vh;
-  padding: 45% 25%;
   background: var(--secondary-bg);
-  display: none;
+}
+header .main__nav .main__menu a {
+  color: var(--secondary-title);
+}
+header .main__nav .main__menu .signup-btn, header .main__nav .main__menu .login-btn {
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+}
+header .main__nav .main__menu .signup-btn {
+  background: var(--primary-title);
+  color: var(--primary-bg);
+}
+header .main__nav .main__menu .login-btn {
+  border-color: var(--primary-title);
 }
 
-a, p {
+a, p, label {
   line-height: 1.5rem;
   letter-spacing: 0.06rem;
 }
@@ -126,12 +143,42 @@ select {
   font-size: 1rem;
 }
 
+@media screen and (min-width: 800px) {
+  header .main__nav .toggle {
+    display: none;
+  }
+  header .main__nav .main__menu {
+    flex-direction: row;
+    gap: 1rem;
+    position: relative;
+    top: auto;
+    right: auto;
+    width: auto;
+    padding-top: 0;
+    height: auto;
+    background: transparent;
+  }
+  header .main__nav .main__menu a {
+    color: var(--secondary-title);
+  }
+  header .main__nav .main__menu .signup-btn, header .main__nav .main__menu .login-btn {
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+  }
+  header .main__nav .main__menu .signup-btn {
+    background: var(--primary-title);
+    color: var(--primary-bg);
+  }
+  header .main__nav .main__menu .login-btn {
+    border-color: var(--primary-title);
+  }
+}
 /* user info */
 .user__info {
-  margin: 1.5rem auto;
+  margin: 4rem auto;
 }
 .user__info .info h1 {
-  font-size: 1.4rem;
+  font-size: clamp(1.2rem, 1rem + 1vw, 2rem);
   color: var(--primary-title);
   padding: 0.5rem;
   min-width: 50%;
@@ -147,7 +194,7 @@ select {
   color: var(--primary-body-color);
 }
 .user__info .user__image {
-  margin-left: 2rem;
+  margin-left: 1rem;
   max-width: 6rem;
   width: 100%;
   aspect-ratio: 1/1;
@@ -157,6 +204,29 @@ select {
 }
 
 /* HOME */
+.banner {
+  margin: 4rem auto;
+}
+.banner .banner__content {
+  padding: 2rem 0;
+  max-width: 32rem;
+  margin-right: auto;
+}
+.banner .banner__content h1 {
+  font-size: clamp(2.6rem, 2rem + 2vw, 5rem);
+  margin-bottom: 1.2rem;
+  letter-spacing: 2px;
+  line-height: clamp(3rem, 2.5rem + 2vw, 5.5rem);
+  color: var(--primary-title);
+}
+.banner .banner__content a {
+  display: inline-block;
+  border: 2px solid var(--primary-title);
+  margin: 1.4rem 0;
+  box-shadow: var(--shadow);
+  color: var(--primary-title);
+}
+
 .main {
   margin: 2rem auto;
   /* Main content */
@@ -190,7 +260,8 @@ select {
   font-size: 0.75rem;
   font-weight: lighter;
   color: var(--primary-title);
-  opacity: 0.6;
+  opacity: 0.8;
+  font-style: italic;
 }
 
 @media screen and (min-width: 768px) {
@@ -203,7 +274,7 @@ select {
   }
   .main .main__content .category__selector {
     width: 50%;
-    margin: auto 0 auto auto;
+    margin: 4rem 0 auto auto;
   }
   .main .main__content .content {
     display: grid;

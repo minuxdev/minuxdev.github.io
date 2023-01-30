@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title></title>
+        <title>Create New Post</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="../css/forms.css" rel="stylesheet">
@@ -13,16 +13,12 @@
 
 
 
-    <section class="form size__control">
-       
-        <div class="form__side">
-            
-        </div>
+    <section class="form size__control form__wrapper">
 
         <!-- Form-->
-        <form method="post">
+        <form method="post" class="create__form">
+            <h1>Create your post here</h1>
             <label for="cat0">
-                Category 
                 <div class="category__selector flex__display section__wrapper">
                     <select name="category">
                         <option value="python">Python</option>
@@ -42,7 +38,7 @@
 
                 <label for="content">
                     Content
-                    <textarea name="content" rows="" cols=""></textarea>
+                    <textarea name="content" rows="10" placeholder="Message"></textarea>
                 </label>
 
                 <input type="submit" class="btn submit-btn" value="Submit">
