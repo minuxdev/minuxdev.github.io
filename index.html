@@ -5,6 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="css/base.css" rel="stylesheet">
+        <link href="css/sal.css" rel="stylesheet">
     </head>
     <body>
     
@@ -58,7 +59,8 @@
         </form>
 
         <div class="page__navigation">
-            <ul class="footer__menu flex__display">
+            <ul class="footer__menu flex__display" data-sal="slide-right"
+        data-sal-duration="600">
                 <li>
                     <div></div><a href="templates/home.html">Courses</a>
                 </li>
@@ -85,7 +87,10 @@
 
 
 
-    <script src="js/base.js">
+    <script src="js/base.js"></script>
+    <script src="js/sal.js"></script>
+    <script>
+        sal({once: false,});
     </script>
 
     </body>

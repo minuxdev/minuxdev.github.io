@@ -190,7 +190,8 @@ select {
 
 footer {
     background: var(--secondary-bg);
-    padding: 1rem 0 0;
+    padding: 2rem 0 0;
+    
 
     .news__letter {
         max-width: 32rem;
@@ -226,9 +227,12 @@ footer {
     }
 
     .page__navigation {
-        .footer__menu {
-            margin: 1rem auto;
+        margin: 2rem auto;
+        padding: 1rem 0;
+        max-width: 32rem;
 
+        .footer__menu {
+            
             li {
                 display: flex;
                 gap: .5rem;
@@ -253,6 +257,7 @@ footer {
         background: var(--primary-bg);
         padding: 1rem;
         color: var(--primary-body-color);
+        font-size: .875rem;
 
         a { 
             color: #aaa; 

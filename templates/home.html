@@ -5,6 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="../css/home.css" rel="stylesheet">
+        <link href="../css/sal.css" rel="stylesheet">
     </head>
     <body>
 
@@ -30,7 +31,7 @@
 
     <section class="banner size__control">
         <div class="banner__content">
-            <h1>Learn tecnology in a simplest way with our paid courses.</h1>
+            <h1 data-sal="slide-up" data-sal-duration="600">Learn tecnology in a simplest way with our paid courses.</h1>
             <a href="#" class="btn banner">Read More...</a>
         </div>
 
@@ -50,7 +51,7 @@
                 <a class="btn" href="#">Show</a>
             </div>
 
-            <ul class="content">
+            <ul class="content" data-sal="slide-up" data-sal-duration="600">
                 <li class="section__wrapper"><a href="#">Lorem ipsum dolor sit amet, qui mi maias shoradt.</a>
                     <p>Sunday, January 29th 2023</p>
                 </li>
@@ -70,7 +71,8 @@
 
                     <p>Sunday, January 29th 2023</p>
                 </li>
-                <li class="section__wrapper"><a href="#">Lorem  ipsum lorem sit amet, qui mi maias shoradt dolor sit amet, qui mi maias shoradt.</a>
+                <li class="section__wrapper" data-sal="slide-right"
+        data-sal-duration="600"><a href="#">Lorem  ipsum lorem sit amet, qui mi maias shoradt dolor sit amet, qui mi maias shoradt.</a>
 
                     <p>Sunday, January 29th 2023</p>
                 </li>
@@ -80,7 +82,13 @@
         </section>
     </main>
 
-    
+        <script src="../js/sal.js"></script>
+    <script>
+        sal({once: false,});
+    </script>
+
+
+
     </body>
 </html>
 
