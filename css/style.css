@@ -117,10 +117,10 @@ header, .card:hover, form {
 
 .btn,
 button {
+  padding: 0.5rem 2rem;
   display: inline-block;
   border: 1px solid transparent;
   background: none;
-  padding: 1rem 2rem;
   border-radius: 0.25rem;
   cursor: pointer;
   transition: background 0.2s ease, border 0.2s ease;
@@ -181,8 +181,8 @@ form textarea {
 }
 form input,
 form textarea {
+  padding: 0.5rem 0.5rem;
   width: 100%;
-  padding: 1rem;
   border: 1px solid #e3def4;
   border-radius: 0.25rem;
   transition: all 0.2s ease;
@@ -440,6 +440,16 @@ ul {
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
+}
+
+.container {
+  margin-top: 1.5rem;
+  display: grid;
+  gap: 1.5rem;
+}
+.container .view-all {
+  display: block;
+  margin-top: 1.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */

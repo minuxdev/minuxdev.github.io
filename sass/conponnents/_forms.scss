@@ -22,8 +22,8 @@ form {
   }
   input,
   textarea {
+    @include padding(0.5rem, 0.5rem);
     width: 100%;
-    padding: 1rem;
     border: 1px solid map-get($colors, "border");
     border-radius: $radius;
     transition: all 0.2s ease;
