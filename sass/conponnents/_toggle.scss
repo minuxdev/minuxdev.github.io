@@ -1,0 +1,26 @@
+@use "../base" as *;
+
+#toggle {
+  min-width: 32px;
+  cursor: pointer;
+  z-index: 100;
+
+  & > * {
+    height: 3px;
+    width: 100%;
+    background-color: map-get($colors, "text");
+    margin: 4px 0;
+    border-radius: $radius;
+    transition: all 0.3s ease;
+  }
+
+  &.active div.first {
+    transform: rotate(-45deg) translateY(8px);
+  }
+  &.active div.middle {
+    opacity: 0;
+  }
+  &.active div.last {
+    transform: rotate(45deg) translateY(-8px);
+  }
+}

@@ -1,0 +1,42 @@
+@use "../base" as *;
+
+body {
+  color: map-get($colors, "text");
+  background: map-get($colors, "background");
+}
+
+.section-wrap {
+  width: 100%;
+
+  .content-section {
+    max-width: $container-width;
+    margin-inline: auto;
+    padding: $padding;
+  }
+}
+
+.container {
+  max-width: $container-width;
+  width: 100%;
+  margin-inline: auto;
+}
+
+.card-wrap {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: $gutter;
+}
+
+.card-wrap-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}

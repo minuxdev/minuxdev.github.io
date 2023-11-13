@@ -1,0 +1,10 @@
+@use "variables" as *;
+@mixin corners($padding, $radius) {
+  padding: $padding;
+  border-radius: $radius;
+}
+
+@mixin btn-variant($background, $text) {
+  background: map-get($colors, $background);
+  color: map-get($colors, $text);
+}

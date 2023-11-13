@@ -1,0 +1,18 @@
+@use "../base" as *;
+
+.separator {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+
+  span {
+    color: map-get($colors, "placeholder");
+  }
+
+  div {
+    height: 2px;
+    width: 100%;
+    background: map-get($colors, "border");
+  }
+}

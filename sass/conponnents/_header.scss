@@ -1,0 +1,55 @@
+@use "../base" as *;
+
+header {
+  padding: 1rem;
+  width: 100%;
+  background: map-get($colors, "white");
+  @extend %box-shadow;
+  position: relative;
+
+  nav {
+    max-width: calc($container-width + $container-width * 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-inline: auto;
+    gap: 1rem;
+
+    a {
+      color: map-get($colors, "text");
+      &.logo {
+        color: map-get($colors, "primary");
+      }
+    }
+
+    ul {
+      flex-direction: column;
+      justify-content: center;
+      position: fixed;
+      left: -110vw;
+      top: 0;
+      height: 100vh;
+      width: 100vw;
+      z-index: 90;
+      background: map-get($colors, "background");
+      transition: all 0.4s ease;
+
+      &.active {
+        left: 0;
+      }
+    }
+
+    @media (min-width: $large) {
+      #toggle {
+        display: none;
+      }
+      ul {
+        flex-direction: row;
+        position: static;
+        height: auto;
+        width: auto;
+        background: none;
+      }
+    }
+  }
+}

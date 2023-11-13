@@ -1,0 +1,148 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog system</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <section class="section-wrap">
+    <div class="content-section">
+      <form class="forms user-authentication">
+        <h1>Login</h1>
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="e.minux@contact.com" />
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="@Minux8180" />
+        <div class="inline-group">
+          <div>
+            <input type="checkbox" id="remember-me" />
+            <label for="remember-me">Remember Me</label>
+          </div>
+          <a href="#">Forgot Password?</a>
+        </div>
+        <button type="button" class="btn-primary">Login</button>
+        <div class="separator">
+          <div></div>
+          <span>OR</span>
+          <div></div>
+        </div>
+        <button class="btn-with-icon">
+          <i class="fa-brands fa-google"></i>
+          Google
+        </button>
+        <button class="btn-with-icon">
+          <i class="fa-brands fa-github"></i>
+          Github
+        </button>
+        <div class="inline-group">
+          <p>Don't an account yet?</p>
+          <a href="#">Sign Up!</a>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!--Request new password-->
+  <section class="section-wrap">
+    <div class="content-section">
+      <form class="forms user-authentication">
+        <h1>Request new password</h1>
+        <p>
+          Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
+          cillum sint consectetur cupidatat.
+        </p>
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="e.minux@contact.com" />
+        <button type="button" class="btn-primary">Post</button>
+      </form>
+    </div>
+  </section>
+
+  <!--Request new password-->
+  <section class="section-wrap">
+    <div class="content-section">
+      <form class="forms user-authentication">
+        <h1>Reset password</h1>
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="@Minux8180" />
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" id="confirm-password" placeholder="@Minux8180" />
+        <button type="button" class="btn-primary">Post</button>
+      </form>
+    </div>
+  </section>
+
+  <!--Sign up-->
+  <section class="section-wrap">
+    <div class="content-section">
+      <form class="forms user-authentication">
+        <h1>Register</h1>
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="minux_dev" />
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="e.minux@contact.com" />
+        <div class="block-group">
+          <div>
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="@Minux8180" />
+          </div>
+          <div>
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" id="confirm-password" placeholder="@Minux8180" />
+          </div>
+        </div>
+        <button type="button" class="btn-primary">Login</button>
+        <div class="separator">
+          <div></div>
+          <span>OR</span>
+          <div></div>
+        </div>
+        <button class="btn-with-icon">
+          <i class="fa-brands fa-google"></i>
+          Google
+        </button>
+        <button class="btn-with-icon">
+          <i class="fa-brands fa-github"></i>
+          Github
+        </button>
+        <div class="inline-group">
+          <p>Already a member?</p>
+          <a href="#">Login</a>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!--Create article-->
+  <section class="section-wrap">
+    <div class="content-section">
+      <form class="forms">
+        <h1>Create Article</h1>
+        <label for="category">Category</label>
+        <select class="select" id="category">
+          <option value="front">Frontend</option>
+          <option value="backend">Backend</option>
+          <option value="sysadmin">SysAdmin</option>
+        </select>
+        <label for="title">Title</label>
+        <input type="text" id="title" placeholder="Django" />
+        <label for="body">Body</label>
+        <textarea rows="14" id="body" placeholder="Article body..."></textarea>
+        <div class="inline-group">
+          <div>
+            <label for="upload">Thumbnail</label>
+            <input type="file" id="Upload" />
+          </div>
+          <div>
+            <input type="checkbox" value="true" />
+            <label for="checkbox">Draft</label>
+          </div>
+        </div>
+        <button type="button" class="btn-primary">Post</button>
+      </form>
+    </div>
+  </section>
+</body>

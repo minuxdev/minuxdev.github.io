@@ -1,0 +1,117 @@
+@use "../base" as *;
+
+form {
+  @extend %box-shadow;
+  padding: $padding;
+  border-radius: $outer-radius;
+  margin-inline: auto;
+
+  &.user-authentication {
+    max-width: 400px;
+    button {
+      width: 100%;
+    }
+  }
+
+  label {
+    display: block;
+    margin: 1rem 0 0.5rem;
+  }
+  textarea {
+    resize: none;
+  }
+  input,
+  textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid map-get($colors, "border");
+    border-radius: $radius;
+    transition: all 0.2s ease;
+
+    &::placeholder {
+      color: map-get($colors, "placeholder");
+    }
+
+    &:focus {
+      box-shadow: 0px 0px 0px 2px $primary;
+    }
+    &[type="checkbox"] {
+      cursor: pointer;
+      &:checked {
+        accent-color: $primary;
+      }
+    }
+  }
+
+  select {
+    width: 100%;
+    padding: 1rem;
+    background: map-get($colors, "white");
+    border: 1px solid map-get($colors, "border");
+    border-radius: $radius;
+  }
+
+  .inline-group {
+    margin: 1rem 0 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+
+    & > * {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      align-items: center;
+      margin: 0;
+
+      & > * {
+        width: auto;
+        margin: 0;
+      }
+    }
+  }
+
+  .block-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    gap: 1rem;
+  }
+
+  button {
+    margin-top: 1rem;
+    &.btn-primary {
+      margin: 1.5rem 0 1rem;
+    }
+  }
+}
+
+.search-form {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  box-shadow: none;
+  gap: 1.5rem;
+  border: 1px solid #eee;
+  background: map-get($colors, "white");
+  min-width: 200px;
+
+  &:focus-within {
+    border: 1px solid map-get($colors, "primary");
+  }
+
+  input[type="search"] {
+    padding: 0.25rem;
+    border: none;
+    background: none;
+    transition: all 0.4s ease-in-out;
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  i {
+    color: map-get($colors, "placeholder");
+  }
+}

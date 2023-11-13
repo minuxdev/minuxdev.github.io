@@ -1,0 +1,30 @@
+// VARIABLES
+$gutter: 1.5rem;
+$padding: 1rem;
+
+$card-padding: 0.5rem;
+
+$radius: 0.25rem;
+$inner-radius: 0.5rem;
+$outer-radius: 1rem;
+
+$primary: #6747c7;
+$primary-variant: #4829a6;
+
+$container-width: 920px;
+
+$colors: (
+  "primary": #6747c7,
+  "primary-variant": #4829a6,
+  "text": #36344d,
+  "placeholder": #9695a4,
+  "border": #e3def4,
+  "active": #c8bdea,
+  "background": #f2f2f8,
+  "white": #fefefe,
+);
+
+// BREAKPOINTS
+$mobile: 500px;
+$tablet: 768px;
+$large: 924px;

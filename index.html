@@ -1,0 +1,209 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog system</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <header>
+    <nav class="header-nav">
+      <a class="logo" ref="#">Logo</a>
+      <form class="search-form active">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="search" placeholder="search here..">
+      </form>
+      <ul>
+        <li>
+          <a href="#">Blog</a>
+        </li>
+        <li>
+          <a href="#">Category</a>
+        </li>
+        <li>
+          <a href="#">Contact</a>
+        </li>
+        <li>
+          <a href="#" class="btn btn-secondary">Login</a>
+        </li>
+        <li>
+          <a href="#" class="btn btn-primary">Sign Up</a>
+        </li>
+      </ul>
+
+      <div id="toggle">
+        <div class="first"></div>
+        <div class="middle"></div>
+        <div class="last"></div>
+      </div>
+
+    </nav>
+  </header>
+  <div class="container">
+    <section class="section-wrap">
+      <div class="content-section">
+        <h1>Typography</h1>
+        <h2>h2-title</h2>
+        <h3>h3-title</h2>
+          <h4>h4-title</h2>
+            <h5>h5-title</h2>
+              <p>paragraph</p>
+              <a href="#">link</a>
+              <small>small</small>
+      </div>
+    </section>
+
+    <section class="section-wrap">
+      <div class="content-section">
+        <h1>Components</h1>
+        <button class="btn-primary">Primary</button>
+        <button class="btn-secondary">Secondary</button>
+        <button class="btn-with-icon">
+          <i class="fa-brands fa-google"></i>
+          button with icon
+        </button>
+      </div>
+    </section>
+
+    <section class="section-wrap">
+      <div class="content-section">
+        <form class="forms">
+          <h1>Forms</h1>
+          <label for="username">Username</label>
+          <input type="text" id="username" placeholder="minux_dev">
+          <label for="active">Active</label>
+          <input type="email" id="active" placeholder="e.minux@contact.com">
+          <div class="block-group">
+            <div>
+              <label for="password">Group 1</label>
+              <input type="password" id="password">
+            </div>
+            <div>
+              <label for="c-password">Group 2</label>
+              <input type="password" id="c-password">
+            </div>
+          </div>
+          <label for="select">Select</label>
+          <select class="select" id="select">
+            <option value="front">Frontend</option>
+            <option value="backend">Backend</option>
+            <option value="sysadmin">SysAdmin</option>
+          </select>
+          <div class="inline-group">
+            <div>
+              <label for="upload">
+                Upload</label>
+              <input type="file" id="Upload">
+            </div>
+            <div>
+              <input type="checkbox" value="true">
+              <label for="checkbox">Checkbox</label>
+            </div>
+          </div>
+          <button type="button" class="btn-primary">Submit</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="section-wrap">
+      <div class="content-section">
+        <h1>cards</h1>
+        <div class="card-wrap">
+          <div class="card">
+            <a href="#">
+              <img src="images/img3.jpg" alt="">
+            </a>
+            <div class="post-info">
+              <a href="#">sysadmin</a>
+              <small>minux dev</small>
+            </div>
+            <h3>sed command</h3>
+          </div>
+          <div class="card">
+            <a href="#">
+              <img src="images/img2.jpg" alt="">
+            </a>
+            <div class="post-info">
+              <a href="#">django</a>
+              <small>minux dev</small>
+            </div>
+            <h3>class based views (cbv)</h3>
+          </div>
+          <div class="card">
+            <a href="#">
+              <img src="images/img3.jpg" alt="">
+            </a>
+            <div class="post-info">
+              <a href="#">sysadmin</a>
+              <small>minux dev</small>
+            </div>
+            <h3>sed command</h3>
+          </div>
+          <div class="card">
+            <a href="#">
+              <img src="images/img2.jpg" alt="">
+            </a>
+            <div class="post-info">
+              <a href="#">django</a>
+              <small>minux dev</small>
+            </div>
+            <h3>class based views (cbv)</h3>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section-wrap">
+      <div class="content-section">
+        <h1>Related Post</h1>
+        <div class="card-wrap-row">
+          <div class="card inline-card">
+            <img src="images/img3.jpg" alt="">
+            <a href="#">class based views (cbv)</a>
+          </div>
+          <div class="card inline-card">
+            <img src="images/img2.jpg" alt="">
+            <a href="#">sed command</a>
+          </div>
+          <div class=" card inline-card">
+            <img src="images/img3.jpg" alt="">
+            <a href="#">class based views (cbv)</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+
+  <script>
+    const classToggler = (selector) => {
+      const element = document.querySelector(selector);
+      const container = ({currentTarget}) => {
+        currentTarget.classList.toggle('active');
+      }
+      element.addEventListener('click', container)
+    }
+
+    const menuToggler = (toggler, menu) => {
+      const toggle = document.querySelector(toggler);
+      const _menu = document.querySelector(menu);
+      toggle.addEventListener('click', ({currentTarget}) => {
+        currentTarget.classList.toggle('active');
+        _menu.classList.toggle('active');
+      })
+    }
+    classToggler('.search-form');
+    menuToggler('#toggle', 'nav ul');
+  </script>
+
+</body>
+
+</html>
