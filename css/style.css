@@ -91,6 +91,16 @@ a.logo {
   font-size: clamp(1.25rem, 0.875rem + 2vw, 1.5rem);
 }
 
+a.view-all {
+  font-size: clamp(1.15rem, 0.875rem + 2vw, 1.25rem);
+  text-decoration: underline from-font dashed;
+}
+
+a.help {
+  font-size: 1rem;
+  text-decoration: underline from-font dashed;
+}
+
 small {
   font-size: 0.875rem;
 }
@@ -109,14 +119,6 @@ body {
 }
 .post-info a {
   font-size: 0.875rem;
-}
-
-.inline-card a {
-  font-size: 1.15rem;
-}
-.inline-card a.help {
-  display: block;
-  text-decoration: dotted;
 }
 
 header, .card:hover, form {
@@ -239,9 +241,10 @@ form .inline-group {
   justify-content: space-between;
   gap: 0.5rem;
 }
-form .inline-group a.help {
+form .inline-group a.help,
+form .inline-group p.help {
   display: block;
-  color: #e3def4;
+  color: #9695a4;
 }
 form .inline-group > * {
   display: flex;
@@ -477,7 +480,7 @@ ul li {
   gap: 1.5rem;
 }
 .container .view-all {
-  display: block;
+  display: inline-block;
   margin-top: 1.5rem;
 }
 

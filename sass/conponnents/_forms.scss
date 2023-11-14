@@ -70,9 +70,10 @@ form {
     justify-content: space-between;
     gap: 0.5rem;
 
-    a.help {
+    a.help,
+    p.help {
       display: block;
-      color: map-get($colors, "border");
+      color: map-get($colors, "placeholder");
     }
 
     & > * {

@@ -61,6 +61,14 @@ a {
 a.logo {
   font-size: clamp(1.25rem, 0.875rem + 2vw, 1.5rem);
 }
+a.view-all {
+  font-size: clamp(1.15rem, 0.875rem + 2vw, 1.25rem);
+  text-decoration: underline from-font dashed;
+}
+a.help {
+  font-size: 1rem;
+  text-decoration: underline from-font dashed;
+}
 
 small {
   font-size: 0.875rem;
@@ -79,15 +87,5 @@ body {
   font-weight: 300;
   a {
     font-size: 0.875rem;
-  }
-}
-
-.inline-card {
-  a {
-    font-size: 1.15rem;
-    &.help {
-      display: block;
-      text-decoration: dotted;
-    }
   }
 }
