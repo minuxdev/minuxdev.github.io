@@ -13,7 +13,7 @@ header {
     justify-content: space-between;
     align-items: center;
     margin-inline: auto;
-    gap: 1rem;
+    gap: 1.5rem;
 
     a {
       color: map-get($colors, "text");

@@ -11,8 +11,6 @@ $outer-radius: 1rem;
 $primary: #6747c7;
 $primary-variant: #4829a6;
 
-$container-width: 920px;
-
 $colors: (
   "primary": #6747c7,
   "primary-variant": #4829a6,
@@ -22,9 +20,11 @@ $colors: (
   "active": #c8bdea,
   "background": #f2f2f8,
   "white": #fefefe,
+  "light-gray": #f0f0f0,
 );
 
 // BREAKPOINTS
 $mobile: 500px;
 $tablet: 768px;
-$large: 924px;
+$large: 960px;
+$container-width: $large;

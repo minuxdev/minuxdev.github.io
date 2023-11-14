@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;1,6..12,300;1,6..12,400;1,6..12,500&display=swap");
 
 :root {
-  font-size: clamp(12px, 10px + 1vw, 18px);
+  font-size: clamp(14px, 12px + 2vw, 16px);
 }
 * {
   font-family: "Nunito Sans", sans-serif;
@@ -26,15 +26,15 @@ label {
 }
 
 h1 {
-  font-weight: 700;
-  font-size: clamp(1.6rem, 1.8rem + 2vw, 3.25rem);
+  font-weight: 600;
+  font-size: clamp(1.8rem, 1.8rem + 2vw, 3.25rem);
   line-height: 1.05;
   margin-bottom: 2rem;
 }
 
 h2 {
-  font-weight: 700;
-  font-size: clamp(1.5rem, 1.25rem + 2vw, 2.875rem);
+  font-weight: 500;
+  font-size: clamp(1.6rem, 1.25rem + 2vw, 2.875rem);
   line-height: 1.25;
   margin-bottom: 1.5rem;
 }
@@ -53,17 +53,17 @@ h6 {
 
 p,
 a {
-  font-size: 1rem;
+  font-size: clamp(14px, 12px + 1vw, 1rem);
   font-weight: 400;
   line-height: 1.5;
 }
 
 a.logo {
-  font-size: clamp(1.15rem, 0.875rem + 2vw, 1.5rem);
+  font-size: clamp(1.25rem, 0.875rem + 2vw, 1.5rem);
 }
 
 small {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
 }
 
 i {
@@ -75,7 +75,7 @@ body {
 }
 
 .post-info {
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 300;
   a {
     font-size: 0.875rem;
@@ -84,6 +84,10 @@ body {
 
 .inline-card {
   a {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
+    &.help {
+      display: block;
+      text-decoration: dotted;
+    }
   }
 }

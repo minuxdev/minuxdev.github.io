@@ -1,7 +1,7 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Login</title>
+    <title>User registration</title>
     <link rel="stylesheet" href="css/style.css" />
     <link
       rel="stylesheet"
@@ -47,22 +47,30 @@
       </nav>
     </header>
 
+    <!--Sign up-->
     <section class="section-wrap">
       <div class="content-section">
         <form class="forms user-authentication">
-          <h1>Login</h1>
+          <h1>Register</h1>
+          <label for="username">Username</label>
+          <input type="text" id="username" placeholder="minux_dev" />
           <label for="email">Email</label>
           <input type="email" id="email" placeholder="e.minux@contact.com" />
-          <label for="password">Password</label>
-          <input type="password" id="password" placeholder="@Minux8180" />
-          <div class="inline-group">
+          <div class="block-group">
             <div>
-              <input type="checkbox" id="remember-me" />
-              <label for="remember-me">Remember Me</label>
+              <label for="password">Password</label>
+              <input type="password" id="password" placeholder="@Minux8180" />
             </div>
-            <a class="help" href="request_password.html">Forgot Password?</a>
+            <div>
+              <label for="confirm-password">Confirm Password</label>
+              <input
+                type="password"
+                id="confirm-password"
+                placeholder="@Minux8180"
+              />
+            </div>
           </div>
-          <button type="button" class="btn-primary">Login</button>
+          <button type="button" class="btn-primary">Register</button>
           <div class="separator">
             <div></div>
             <span>OR</span>
@@ -77,12 +85,13 @@
             Github
           </button>
           <div class="inline-group">
-            <p>Don't an account yet?</p>
-            <a class="help" href="register.html">Sign Up!</a>
+            <p>Already a member?</p>
+            <a href="login.html">Login</a>
           </div>
         </form>
       </div>
     </section>
+
     <script src="main.js"></script>
   </body>
 </html>

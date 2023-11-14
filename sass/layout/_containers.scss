@@ -11,7 +11,7 @@ body {
   .content-section {
     max-width: $container-width;
     margin-inline: auto;
-    padding: $padding;
+    @include padding(8%, 1rem);
   }
 }
 
@@ -39,4 +39,8 @@ ul {
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
+
+  li {
+    padding: 0.25rem;
+  }
 }

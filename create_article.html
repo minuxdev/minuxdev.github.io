@@ -1,7 +1,7 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Login</title>
+    <title>Create Article</title>
     <link rel="stylesheet" href="css/style.css" />
     <link
       rel="stylesheet"
@@ -47,42 +47,40 @@
       </nav>
     </header>
 
+    <!--Create article-->
     <section class="section-wrap">
       <div class="content-section">
-        <form class="forms user-authentication">
-          <h1>Login</h1>
-          <label for="email">Email</label>
-          <input type="email" id="email" placeholder="e.minux@contact.com" />
-          <label for="password">Password</label>
-          <input type="password" id="password" placeholder="@Minux8180" />
+        <form class="forms">
+          <h1>Create Article</h1>
+          <label for="category">Category</label>
+          <select class="select" id="category">
+            <option value="front">Frontend</option>
+            <option value="backend">Backend</option>
+            <option value="sysadmin">SysAdmin</option>
+          </select>
+          <label for="title">Title</label>
+          <input type="text" id="title" placeholder="Django" />
+          <label for="body">Body</label>
+          <textarea
+            rows="14"
+            id="body"
+            placeholder="Article body..."
+          ></textarea>
           <div class="inline-group">
             <div>
-              <input type="checkbox" id="remember-me" />
-              <label for="remember-me">Remember Me</label>
+              <label for="upload">Thumbnail</label>
+              <input type="file" id="Upload" />
             </div>
-            <a class="help" href="request_password.html">Forgot Password?</a>
+            <div>
+              <input type="checkbox" value="true" />
+              <label for="checkbox">Draft</label>
+            </div>
           </div>
-          <button type="button" class="btn-primary">Login</button>
-          <div class="separator">
-            <div></div>
-            <span>OR</span>
-            <div></div>
-          </div>
-          <button class="btn-with-icon">
-            <i class="fa-brands fa-google"></i>
-            Google
-          </button>
-          <button class="btn-with-icon">
-            <i class="fa-brands fa-github"></i>
-            Github
-          </button>
-          <div class="inline-group">
-            <p>Don't an account yet?</p>
-            <a class="help" href="register.html">Sign Up!</a>
-          </div>
+          <button type="button" class="btn-primary">Post</button>
         </form>
       </div>
     </section>
+
     <script src="main.js"></script>
   </body>
 </html>

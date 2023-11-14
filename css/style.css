@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;1,6..12,300;1,6..12,400;1,6..12,500&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -25,7 +29,7 @@ img {
 }
 
 :root {
-  font-size: clamp(12px, 10px + 1vw, 18px);
+  font-size: clamp(14px, 12px + 2vw, 16px);
 }
 
 * {
@@ -51,15 +55,15 @@ label {
 }
 
 h1 {
-  font-weight: 700;
-  font-size: clamp(1.6rem, 1.8rem + 2vw, 3.25rem);
+  font-weight: 600;
+  font-size: clamp(1.8rem, 1.8rem + 2vw, 3.25rem);
   line-height: 1.05;
   margin-bottom: 2rem;
 }
 
 h2 {
-  font-weight: 700;
-  font-size: clamp(1.5rem, 1.25rem + 2vw, 2.875rem);
+  font-weight: 500;
+  font-size: clamp(1.6rem, 1.25rem + 2vw, 2.875rem);
   line-height: 1.25;
   margin-bottom: 1.5rem;
 }
@@ -78,17 +82,17 @@ h6 {
 
 p,
 a {
-  font-size: 1rem;
+  font-size: clamp(14px, 12px + 1vw, 1rem);
   font-weight: 400;
   line-height: 1.5;
 }
 
 a.logo {
-  font-size: clamp(1.15rem, 0.875rem + 2vw, 1.5rem);
+  font-size: clamp(1.25rem, 0.875rem + 2vw, 1.5rem);
 }
 
 small {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
 }
 
 i {
@@ -100,7 +104,7 @@ body {
 }
 
 .post-info {
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 300;
 }
 .post-info a {
@@ -108,7 +112,11 @@ body {
 }
 
 .inline-card a {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
+}
+.inline-card a.help {
+  display: block;
+  text-decoration: dotted;
 }
 
 header, .card:hover, form {
@@ -149,7 +157,7 @@ button.btn-secondary:hover {
 }
 .btn.btn-with-icon,
 button.btn-with-icon {
-  background: #fefefe;
+  background: #f2f2f8;
   color: #36344d;
   display: inline-flex;
   gap: 0.5rem;
@@ -165,6 +173,7 @@ form {
   padding: 1rem;
   border-radius: 1rem;
   margin-inline: auto;
+  background: #fefefe;
 }
 form.user-authentication {
   max-width: 400px;
@@ -195,6 +204,18 @@ form input:focus,
 form textarea:focus {
   box-shadow: 0px 0px 0px 2px #6747c7;
 }
+form input[type=file],
+form textarea[type=file] {
+  max-width: 240px;
+  width: 100%;
+}
+form input[type=file]::file-selector-button,
+form textarea[type=file]::file-selector-button {
+  background-color: none;
+  border: 1px solid #e3def4;
+  padding: 0.25rem;
+  border-radius: 2px;
+}
 form input[type=checkbox],
 form textarea[type=checkbox] {
   cursor: pointer;
@@ -204,8 +225,8 @@ form textarea[type=checkbox]:checked {
   accent-color: #6747c7;
 }
 form select {
+  padding: 0.5rem 0.5rem;
   width: 100%;
-  padding: 1rem;
   background: #fefefe;
   border: 1px solid #e3def4;
   border-radius: 0.25rem;
@@ -217,6 +238,10 @@ form .inline-group {
   align-items: center;
   justify-content: space-between;
   gap: 0.5rem;
+}
+form .inline-group a.help {
+  display: block;
+  color: #e3def4;
 }
 form .inline-group > * {
   display: flex;
@@ -242,14 +267,15 @@ form button.btn-primary {
 }
 
 .search-form {
+  padding: 0.5rem 1rem;
   display: inline-flex;
   align-items: center;
-  padding: 0.5rem 1rem;
   box-shadow: none;
   gap: 1.5rem;
   border: 1px solid #eee;
   background: #fefefe;
-  min-width: 200px;
+  max-width: 320px;
+  width: 100%;
 }
 .search-form:focus-within {
   border: 1px solid #6747c7;
@@ -323,12 +349,12 @@ header {
   position: relative;
 }
 header nav {
-  max-width: 1380px;
+  max-width: 1440px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-inline: auto;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 header nav a {
   color: #36344d;
@@ -351,7 +377,7 @@ header nav ul {
 header nav ul.active {
   left: 0;
 }
-@media (min-width: 924px) {
+@media (min-width: 960px) {
   header nav #toggle {
     display: none;
   }
@@ -411,13 +437,13 @@ body {
   width: 100%;
 }
 .section-wrap .content-section {
-  max-width: 920px;
+  max-width: 960px;
   margin-inline: auto;
-  padding: 1rem;
+  padding: 8% 1rem;
 }
 
 .container {
-  max-width: 920px;
+  max-width: 960px;
   width: 100%;
   margin-inline: auto;
 }
@@ -440,6 +466,9 @@ ul {
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
+}
+ul li {
+  padding: 0.25rem;
 }
 
 .container {

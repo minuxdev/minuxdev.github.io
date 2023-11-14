@@ -29,7 +29,7 @@ button {
     }
   }
   &.btn-with-icon {
-    @include btn-variant("white", "text");
+    @include btn-variant("background", "text");
     display: inline-flex;
     gap: 0.5rem;
     align-items: center;
