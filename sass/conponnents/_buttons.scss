@@ -9,6 +9,7 @@ button {
   border-radius: $radius;
   cursor: pointer;
   transition: all 0.3s ease;
+  white-space: nowrap;
 
   &:active {
     box-shadow: 0 0 0 2px map-get($colors, "active");
