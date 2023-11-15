@@ -8,9 +8,7 @@ button {
   background: none;
   border-radius: $radius;
   cursor: pointer;
-  transition:
-    background 0.2s ease,
-    border 0.2s ease;
+  transition: all 0.3s ease;
 
   &:active {
     box-shadow: 0 0 0 2px map-get($colors, "active");
@@ -34,9 +32,10 @@ button {
     gap: 0.5rem;
     align-items: center;
     justify-content: center;
+    border: 1px solid map-get($colors, "active");
 
     &:hover {
-      border: 1px solid map-get($colors, "active");
+      border: 1px solid map-get($colors, "lightgray");
     }
   }
 }

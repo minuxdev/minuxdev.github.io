@@ -3,6 +3,7 @@
 .separator {
   @include display-flex(0.5rem, space-between);
   flex-wrap: nowrap;
+  margin: 1rem 0;
 
   span {
     color: map-get($colors, "placeholder");

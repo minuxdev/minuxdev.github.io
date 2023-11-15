@@ -1,0 +1,79 @@
+@use "../base/" as *;
+
+footer {
+  background: map-get($colors, "title");
+  margin-inline: 0;
+
+  .footer {
+    display: grid;
+    gap: 0.75rem;
+    grid-template-columns: repeat(2, 1fr);
+
+    @media screen and (min-width: $large) {
+      grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+      gap: $gutter;
+
+      .logo {
+        grid-column: auto;
+        justify-self: end;
+      }
+    }
+
+    h4 {
+      color: map-get($colors, "border");
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      flex-direction: column;
+      gap: 0.5rem;
+      align-items: flex-start;
+
+      li {
+        display: inline-flex;
+        align-items: center;
+
+        &::before {
+          content: "";
+          display: block;
+          width: 0.5rem;
+          height: 0.25rem;
+          border-radius: 0.125rem;
+          margin-right: 0.5rem;
+          background: map-get($colors, "border");
+        }
+      }
+
+      a {
+        color: map-get($colors, "border");
+      }
+    }
+
+    .social-media {
+      h4 {
+        text-align: center;
+      }
+      .social-icons {
+        @include display-flex(1rem, $jc: center);
+        a {
+          display: block;
+          padding: 0.5rem;
+        }
+        i {
+          color: map-get($colors, "border");
+        }
+      }
+    }
+    .logo {
+      grid-column: 1 / 4;
+      justify-self: center;
+    }
+  }
+
+  p {
+    text-align: center;
+    color: map-get($colors, "border");
+    @include padding(2rem, 0);
+    margin: 0 auto;
+  }
+}

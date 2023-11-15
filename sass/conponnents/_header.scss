@@ -17,7 +17,8 @@ header {
     a {
       color: map-get($colors, "title");
       cursor: pointer;
-      &.logo {
+      &.logo,
+      &:hover {
         color: map-get($colors, "primary");
       }
     }
@@ -25,6 +26,7 @@ header {
     ul {
       flex-direction: column;
       justify-content: center;
+      flex-wrap: nowrap;
       position: fixed;
       left: -110vw;
       top: 0;
@@ -37,6 +39,10 @@ header {
       &.active {
         left: 0;
       }
+
+      li {
+        padding: 0.5rem 0;
+      }
     }
 
     @media (min-width: $large) {
@@ -44,6 +50,9 @@ header {
         display: none;
       }
       ul {
+        li {
+          padding: 0;
+        }
         flex-direction: row;
         position: static;
         height: auto;

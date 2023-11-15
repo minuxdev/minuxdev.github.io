@@ -1,5 +1,17 @@
 @use "../base" as *;
 
+.card-wrap {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: $gutter;
+}
+
+.card-wrap-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+}
+
 .card {
   @include corners($card-padding, 0.75rem);
   display: flex;

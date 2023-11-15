@@ -27,5 +27,6 @@ $colors: (
 // BREAKPOINTS
 $mobile: 500px;
 $tablet: 768px;
-$large: 996px;
-$container-width: $large;
+$large: 960px;
+$desktop: 1200px;
+$container-width: $desktop;
