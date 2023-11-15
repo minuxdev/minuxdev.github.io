@@ -1,0 +1,30 @@
+@use "../base" as *;
+
+.container-details {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $gutter;
+
+  @media (min-width: $large) {
+    grid-template-columns: 1fr minmax(240px, 320px);
+  }
+}
+
+.main-content {
+  background: map-get($colors, "white");
+  @include padding(2rem, 1rem);
+  .post-details {
+    @include display-flex(1rem);
+    max-width: 260px;
+    margin: 0 auto 1.5rem;
+  }
+
+  h1 {
+    text-align: center;
+  }
+}
+
+aside {
+  @include padding(2rem, 1rem);
+  background: map-get($colors, "white");
+}

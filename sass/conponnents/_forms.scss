@@ -63,11 +63,8 @@ form {
   }
 
   .inline-group {
+    @include display-flex(0.5rem, space-between);
     margin: 1rem 0 0.5rem;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
     gap: 0.5rem;
 
     a.help,
@@ -77,10 +74,7 @@ form {
     }
 
     & > * {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      align-items: center;
+      @include display-flex(0.5rem);
       margin: 0;
 
       & > * {

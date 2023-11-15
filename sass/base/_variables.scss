@@ -14,17 +14,18 @@ $primary-variant: #4829a6;
 $colors: (
   "primary": #6747c7,
   "primary-variant": #4829a6,
-  "text": #36344d,
+  "title": #36344d,
+  "body": #53516b,
   "placeholder": #9695a4,
   "border": #e3def4,
   "active": #c8bdea,
-  "background": #f2f2f8,
-  "white": #fefefe,
+  "background": #f8f8fa,
+  "white": #fff,
   "light-gray": #f0f0f0,
 );
 
 // BREAKPOINTS
 $mobile: 500px;
 $tablet: 768px;
-$large: 960px;
+$large: 996px;
 $container-width: $large;

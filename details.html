@@ -1,7 +1,7 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Login</title>
+    <title>Create Article</title>
     <link rel="stylesheet" href="css/style.css" />
     <link
       rel="stylesheet"
@@ -16,7 +16,7 @@
     <!--Header-->
     <header>
       <nav class="header-nav">
-        <a class="logo" ref="home.html">Logo</a>
+        <a class="logo" ref="#">Logo</a>
         <form class="search-form active">
           <i class="fa-solid fa-magnifying-glass"></i>
           <input type="search" placeholder="search here.." />
@@ -47,42 +47,38 @@
       </nav>
     </header>
 
-    <section class="section-wrap">
-      <div class="content-section">
-        <form class="forms user-authentication">
-          <h1>Login</h1>
-          <label for="email">Email</label>
-          <input type="email" id="email" placeholder="e.minux@contact.com" />
-          <label for="password">Password</label>
-          <input type="password" id="password" placeholder="@Minux8180" />
-          <div class="inline-group">
-            <div>
-              <input type="checkbox" id="remember-me" />
-              <p>Remember Me</p>
+    <div class="container">
+      <div class="container-details content-section">
+        <!--Main content-->
+        <main class="main-content">
+          <div class="post-info post-details">
+            <a href="#">python</a>
+            <small>minux dev</small>
+            <span class="views"><i class="fa-regular fa-eye"></i>38</span>
+          </div>
+          <h1>Django Class Based Views (CBV)</h1>
+          <figure class="thumbnail"></figure>
+        </main>
+
+        <!--Related posts-->
+        <aside>
+          <h3>Related Post</h3>
+          <div class="card-wrap-row">
+            <div class="card inline-card">
+              <img src="images/img3.jpg" alt="" />
+              <a href="#">class based views (cbv)</a>
             </div>
-            <a class="help" href="request_password.html">Forgot Password?</a>
+            <div class="card inline-card">
+              <img src="images/img2.jpg" alt="" />
+              <a href="#">sed command</a>
+            </div>
+            <div class="card inline-card">
+              <img src="images/img3.jpg" alt="" />
+              <a href="#">class based views (cbv)</a>
+            </div>
           </div>
-          <button type="button" class="btn-primary">Login</button>
-          <div class="separator">
-            <div></div>
-            <span>OR</span>
-            <div></div>
-          </div>
-          <button class="btn-with-icon">
-            <i class="fa-brands fa-google"></i>
-            Google
-          </button>
-          <button class="btn-with-icon">
-            <i class="fa-brands fa-github"></i>
-            Github
-          </button>
-          <div class="inline-group">
-            <p class="help">Don't an account yet?</p>
-            <a class="help" href="register.html">Sign Up!</a>
-          </div>
-        </form>
+        </aside>
       </div>
-    </section>
-    <script src="main.js"></script>
+    </div>
   </body>
 </html>

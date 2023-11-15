@@ -2,10 +2,10 @@
 
 .card {
   @include corners($card-padding, 0.75rem);
-  border: 1px solid map-get($colors, "border");
-  background: map-get($colors, "white");
   display: flex;
   flex-direction: column;
+  border: 1px solid map-get($colors, "border");
+  background: map-get($colors, "white");
   transition: all 0.3s ease;
 
   &:hover {
@@ -25,13 +25,21 @@
   }
 
   .post-info {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-bottom: 0.25rem;
-
+    @include display-flex(1rem);
+    width: 100%;
+    margin-bottom: 0.5rem;
+    //border-bottom: 1px solid map-get($colors, "border");
     a {
-      margin-right: 0.5rem;
+      text-decoration: underline from-font;
+    }
+    a,
+    small,
+    span > * {
+      color: map-get($colors, "placeholder");
+    }
+
+    span {
+      @include display-flex(0.25rem);
     }
   }
 

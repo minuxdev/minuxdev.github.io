@@ -1,24 +1,34 @@
 @use "../base" as *;
 
 body {
-  color: map-get($colors, "text");
+  color: map-get($colors, "body");
   background: map-get($colors, "background");
 }
 
 .section-wrap {
   width: 100%;
+}
 
-  .content-section {
-    max-width: $container-width;
-    margin-inline: auto;
-    @include padding(8%, 1rem);
+.content-section {
+  max-width: $container-width;
+  margin-inline: auto;
+  padding: 3rem 1rem 1rem;
+}
+
+.container-details {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $gutter;
+
+  @media (min-width: $large) {
+    grid-template-columns: 1fr minmax(240px, 320px);
   }
 }
 
 .container {
   max-width: $container-width;
   width: 100%;
-  margin-inline: auto;
+  margin: auto;
 }
 
 .card-wrap {
@@ -34,11 +44,7 @@ body {
 }
 
 ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
+  @include display-flex(1rem, space-between);
 
   li {
     padding: 0.25rem;

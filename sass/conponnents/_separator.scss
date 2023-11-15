@@ -1,10 +1,8 @@
 @use "../base" as *;
 
 .separator {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0.5rem;
+  @include display-flex(0.5rem, space-between);
+  flex-wrap: nowrap;
 
   span {
     color: map-get($colors, "placeholder");

@@ -28,6 +28,16 @@ img {
   object-fit: cover;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label {
+  color: #36344d;
+}
+
 :root {
   font-size: clamp(14px, 12px + 2vw, 16px);
 }
@@ -57,7 +67,7 @@ label {
 h1 {
   font-weight: 600;
   font-size: clamp(1.8rem, 1.8rem + 2vw, 3.25rem);
-  line-height: 1.05;
+  line-height: 1.15;
   margin-bottom: 2rem;
 }
 
@@ -71,7 +81,7 @@ h2 {
 h3 {
   font-weight: 600;
   line-height: 1.3;
-  font-size: clamp(1.15rem, 0.875rem + 2vw, 1.5rem);
+  font-size: clamp(1.17rem, 0.875rem + 1vw, 1.5rem);
 }
 
 h4,
@@ -82,7 +92,7 @@ h6 {
 
 p,
 a {
-  font-size: clamp(14px, 12px + 1vw, 1rem);
+  font-size: clamp(15px, 12px + 1vw, 1.15rem);
   font-weight: 400;
   line-height: 1.5;
 }
@@ -114,11 +124,16 @@ body {
 }
 
 .post-info {
-  font-size: 1rem;
   font-weight: 300;
 }
-.post-info a {
-  font-size: 0.875rem;
+.post-info > *,
+.post-info span > * {
+  font-size: 0.975rem;
+}
+
+.post-details > *,
+.post-details span > * {
+  font-size: clamp(0.875rem, 0.875rem + 1vw, 1.15rem);
 }
 
 header, .card:hover, form {
@@ -142,7 +157,7 @@ button:active {
 .btn.btn-primary,
 button.btn-primary {
   background: #6747c7;
-  color: #fefefe;
+  color: #fff;
 }
 .btn.btn-primary:hover,
 button.btn-primary:hover {
@@ -155,11 +170,11 @@ button.btn-secondary {
 .btn.btn-secondary:hover,
 button.btn-secondary:hover {
   background: #6747c7;
-  color: #fefefe;
+  color: #fff;
 }
 .btn.btn-with-icon,
 button.btn-with-icon {
-  background: #f2f2f8;
+  background: #f8f8fa;
   color: #36344d;
   display: inline-flex;
   gap: 0.5rem;
@@ -175,7 +190,7 @@ form {
   padding: 1rem;
   border-radius: 1rem;
   margin-inline: auto;
-  background: #fefefe;
+  background: #fff;
 }
 form.user-authentication {
   max-width: 400px;
@@ -229,16 +244,17 @@ form textarea[type=checkbox]:checked {
 form select {
   padding: 0.5rem 0.5rem;
   width: 100%;
-  background: #fefefe;
+  background: #fff;
   border: 1px solid #e3def4;
   border-radius: 0.25rem;
 }
 form .inline-group {
-  margin: 1rem 0 0.5rem;
   display: flex;
-  flex-wrap: wrap;
+  gap: 0.5rem;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 1rem 0 0.5rem;
   gap: 0.5rem;
 }
 form .inline-group a.help,
@@ -248,9 +264,10 @@ form .inline-group p.help {
 }
 form .inline-group > * {
   display: flex;
-  flex-wrap: wrap;
   gap: 0.5rem;
   align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
   margin: 0;
 }
 form .inline-group > * > * {
@@ -276,7 +293,7 @@ form button.btn-primary {
   box-shadow: none;
   gap: 1.5rem;
   border: 1px solid #eee;
-  background: #fefefe;
+  background: #fff;
   max-width: 320px;
   width: 100%;
 }
@@ -299,10 +316,10 @@ form button.btn-primary {
 .card {
   padding: 0.5rem;
   border-radius: 0.75rem;
-  border: 1px solid #e3def4;
-  background: #fefefe;
   display: flex;
   flex-direction: column;
+  border: 1px solid #e3def4;
+  background: #fff;
   transition: all 0.3s ease;
 }
 .card a {
@@ -317,12 +334,27 @@ form button.btn-primary {
 }
 .card .post-info {
   display: flex;
+  gap: 1rem;
   align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 0.25rem;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 0.5rem;
 }
 .card .post-info a {
-  margin-right: 0.5rem;
+  text-decoration: underline from-font;
+}
+.card .post-info a,
+.card .post-info small,
+.card .post-info span > * {
+  color: #9695a4;
+}
+.card .post-info span {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
 }
 .card a {
   cursor: pointer;
@@ -348,19 +380,23 @@ form button.btn-primary {
 header {
   padding: 1rem;
   width: 100%;
-  background: #fefefe;
+  background: #fff;
   position: relative;
 }
 header nav {
-  max-width: 1440px;
+  max-width: 1494px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-inline: auto;
   gap: 1.5rem;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  margin-inline: auto;
+  width: 100%;
 }
 header nav a {
   color: #36344d;
+  cursor: pointer;
 }
 header nav a.logo {
   color: #6747c7;
@@ -374,13 +410,13 @@ header nav ul {
   height: 100vh;
   width: 100vw;
   z-index: 90;
-  background: #f2f2f8;
+  background: #f8f8fa;
   transition: all 0.4s ease;
 }
 header nav ul.active {
   left: 0;
 }
-@media (min-width: 960px) {
+@media (min-width: 996px) {
   header nav #toggle {
     display: none;
   }
@@ -418,9 +454,11 @@ header nav ul.active {
 
 .separator {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   gap: 0.5rem;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 .separator span {
   color: #9695a4;
@@ -432,23 +470,35 @@ header nav ul.active {
 }
 
 body {
-  color: #36344d;
-  background: #f2f2f8;
+  color: #53516b;
+  background: #f8f8fa;
 }
 
 .section-wrap {
   width: 100%;
 }
-.section-wrap .content-section {
-  max-width: 960px;
+
+.content-section {
+  max-width: 996px;
   margin-inline: auto;
-  padding: 8% 1rem;
+  padding: 3rem 1rem 1rem;
+}
+
+.container-details {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+@media (min-width: 996px) {
+  .container-details {
+    grid-template-columns: 1fr minmax(240px, 320px);
+  }
 }
 
 .container {
-  max-width: 960px;
+  max-width: 996px;
   width: 100%;
-  margin-inline: auto;
+  margin: auto;
 }
 
 .card-wrap {
@@ -465,23 +515,51 @@ body {
 
 ul {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
   gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 ul li {
   padding: 0.25rem;
 }
 
-.container {
-  margin-top: 1.5rem;
-  display: grid;
-  gap: 1.5rem;
-}
-.container .view-all {
+.view-all {
   display: inline-block;
   margin-top: 1.5rem;
+}
+
+.container-details {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+@media (min-width: 996px) {
+  .container-details {
+    grid-template-columns: 1fr minmax(240px, 320px);
+  }
+}
+
+.main-content {
+  background: #fff;
+  padding: 2rem 1rem;
+}
+.main-content .post-details {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  max-width: 260px;
+  margin: 0 auto 1.5rem;
+}
+.main-content h1 {
+  text-align: center;
+}
+
+aside {
+  padding: 2rem 1rem;
+  background: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */

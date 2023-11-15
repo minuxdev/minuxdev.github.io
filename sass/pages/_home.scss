@@ -1,12 +1,6 @@
 @use "../base" as *;
 
-.container {
+.view-all {
+  display: inline-block;
   margin-top: $gutter;
-  display: grid;
-  gap: $gutter;
-
-  .view-all {
-    display: inline-block;
-    margin-top: $gutter;
-  }
 }

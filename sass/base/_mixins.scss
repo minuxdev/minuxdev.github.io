@@ -13,3 +13,11 @@
 @mixin padding($v: 0.5rem, $h: 0.5rem) {
   padding: $v $h;
 }
+
+@mixin display-flex($gap: 0.25rem, $jc: flex-start) {
+  display: flex;
+  gap: $gap;
+  align-items: center;
+  justify-content: $jc;
+  flex-wrap: wrap;
+}

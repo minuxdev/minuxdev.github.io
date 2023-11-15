@@ -9,14 +9,14 @@ header {
 
   nav {
     max-width: calc($container-width + $container-width * 0.5);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include display-flex(1.5rem, space-between);
+    flex-wrap: nowrap;
     margin-inline: auto;
-    gap: 1.5rem;
+    width: 100%;
 
     a {
-      color: map-get($colors, "text");
+      color: map-get($colors, "title");
+      cursor: pointer;
       &.logo {
         color: map-get($colors, "primary");
       }
