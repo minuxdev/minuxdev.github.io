@@ -1,84 +1,142 @@
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Create Article</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
 
-  <body>
-    <!--Header-->
-    <header>
-      <nav class="header-nav">
-        <a class="logo" ref="#">Logo</a>
-        <form class="search-form active">
-          <i class="fa-solid fa-magnifying-glass"></i>
-          <input type="search" placeholder="search here.." />
-        </form>
-        <ul>
-          <li>
-            <a href="#">Blog</a>
-          </li>
-          <li>
-            <a href="#">Category</a>
-          </li>
-          <li>
-            <a href="#">Contact</a>
-          </li>
-          <li>
-            <a href="login.html" class="btn btn-secondary">Login</a>
-          </li>
-          <li>
-            <a href="register.html" class="btn btn-primary">Sign Up</a>
-          </li>
-        </ul>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Create Article</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
 
-        <div id="toggle">
-          <div class="first"></div>
-          <div class="middle"></div>
-          <div class="last"></div>
-        </div>
-      </nav>
-    </header>
+<body>
+  <!--Header-->
+  <header>
+    <nav class="header-nav">
+      <a class="logo" ref="#">Logo</a>
+      <form class="search-form active">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="search" placeholder="search here.." />
+      </form>
+      <ul>
+        <li>
+          <a href="#">Blog</a>
+        </li>
+        <li>
+          <a href="#">Category</a>
+        </li>
+        <li>
+          <a href="#">Contact</a>
+        </li>
+        <li>
+          <a href="login.html" class="btn btn-secondary">Login</a>
+        </li>
+        <li>
+          <a href="register.html" class="btn btn-primary">Sign Up</a>
+        </li>
+      </ul>
 
-    <div class="container">
-      <div class="container-details content-section">
-        <!--Main content-->
-        <main class="main-content">
-          <div class="post-info post-details">
-            <a href="#">python</a>
-            <small>minux dev</small>
-            <span class="views"><i class="fa-regular fa-eye"></i>38</span>
-          </div>
-          <h1>Django Class Based Views (CBV)</h1>
-          <figure class="thumbnail"></figure>
-        </main>
-
-        <!--Related posts-->
-        <aside>
-          <h3>Related Post</h3>
-          <div class="card-wrap-row">
-            <div class="card inline-card">
-              <img src="images/img3.jpg" alt="" />
-              <a href="#">class based views (cbv)</a>
-            </div>
-            <div class="card inline-card">
-              <img src="images/img2.jpg" alt="" />
-              <a href="#">sed command</a>
-            </div>
-            <div class="card inline-card">
-              <img src="images/img3.jpg" alt="" />
-              <a href="#">class based views (cbv)</a>
-            </div>
-          </div>
-        </aside>
+      <div id="toggle">
+        <div class="first"></div>
+        <div class="middle"></div>
+        <div class="last"></div>
       </div>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="container-details content-section">
+      <!--Main content-->
+      <main class="main-content">
+        <div class="post-info post-details">
+          <a href="#">python</a>
+          <small>minux dev</small>
+          <span class="views"><i class="fa-regular fa-eye"></i>38</span>
+        </div>
+        <h1>Django Class Based Views (CBV)</h1>
+        <figure class="thumbnail">
+          <img src="images/img2.jpg" alt="" />
+        </figure>
+        <section class="content">
+          <p>
+            To illustrate it we will create a model to use in our project.
+            Assuming you already have everything set up, let’s start by
+            creating a model which we will call Post.
+          </p>
+          <p>
+            Now we need more couple things such as a template and configure
+            the urls.py file before we jump into our today’s lesson.
+          </p>
+
+          <div class="code-block">
+            <pre>
+              from django.db import models
+
+              class Post(models.Model):
+              title = models.CharField(max_length=255)
+              content = models.TextField()
+              created_on = models.DateField(auto_now_add=True)
+            </pre>
+          </div>
+
+          <h2>Bash loops</h2>
+          <p>
+            To understand the structure of Bash “for” loops, let’s create a
+            script that uses a “for” loop to iterate the provided variables as
+            shown in the following:
+          </p>
+          <p>
+            In the previous script, let’s dissect each line of code to
+            understand it in detail.
+          </p>
+
+          <ol>
+            <li>
+              #!/bin/bash – It is the first line in our script and we add it
+              to symbolize that we are creating a Bash script.
+            </li>
+            <li>
+              for x in 1 2 3 – Here, “for” stands for the loop. The “x” is the
+              variable placeholder and the items to iterate are the “1, 2, and
+              3.”
+            </li>
+            <li>
+              do – It is added to symbolize the start of the “for” loop. Below
+              it, that’s where you add the commands
+            </li>
+            <li>
+              that you want to execute for each loop. For instance, we use the
+              “echo” command to output the “Number” and
+            </li>
+            <li>the placeholder for each item that we added.</li>
+            <li>
+              done -We add this keyword to stop the loop once all iterations
+              occur.
+            </li>
+          </ol>
+        </section>
+      </main>
+
+      <!--Related posts-->
+      <aside>
+        <h3>Related Post</h3>
+        <div class="card-wrap-row">
+          <div class="card inline-card">
+            <img src="images/img3.jpg" alt="" />
+            <a href="#">class based views (cbv)</a>
+          </div>
+          <div class="card inline-card">
+            <img src="images/img2.jpg" alt="" />
+            <a href="#">sed command</a>
+          </div>
+          <div class="card inline-card">
+            <img src="images/img3.jpg" alt="" />
+            <a href="#">class based views (cbv)</a>
+          </div>
+        </div>
+      </aside>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>

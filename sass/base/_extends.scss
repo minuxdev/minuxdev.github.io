@@ -1,4 +1,8 @@
 // EXTENDS
 %box-shadow {
-  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px -6px rgba(11, 43, 158, 0.1);
+  &:hover {
+    box-shadow: 0 10px 20px rgba(11, 43, 158, 0.1);
+  }
 }

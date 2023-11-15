@@ -34,7 +34,7 @@ h1 {
 
 h2 {
   font-weight: 500;
-  font-size: clamp(1.6rem, 1.25rem + 2vw, 2.875rem);
+  font-size: clamp(1.4rem, 1.25rem + 2vw, 2.25rem);
   line-height: 1.25;
   margin-bottom: 1.5rem;
 }
@@ -55,7 +55,7 @@ p,
 a {
   font-size: clamp(15px, 12px + 1vw, 1.15rem);
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
 a.logo {
