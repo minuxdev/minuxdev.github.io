@@ -18,7 +18,8 @@ header {
       color: map-get($colors, "title");
       cursor: pointer;
       &.logo,
-      &:hover {
+      &:hover,
+      &.active {
         color: map-get($colors, "primary");
       }
     }
@@ -42,6 +43,19 @@ header {
 
       li {
         padding: 0.5rem 0;
+
+        &.user-profile a {
+          margin-left: 2rem;
+          display: inline-flex;
+          gap: 1rem;
+          align-items: center;
+
+          .profile-photo {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+          }
+        }
       }
     }
 
@@ -50,6 +64,7 @@ header {
         display: none;
       }
       ul {
+        gap: 2rem;
         li {
           padding: 0;
         }

@@ -145,6 +145,10 @@ header a {
   font-weight: 500;
 }
 
+.categories a {
+  font-size: clamp(0.75rem, 0.75rem + 1vw, 0.875rem);
+}
+
 footer ul a {
   font-size: clamp(0.75rem, 0.75rem + 1vw, 0.875rem);
 }
@@ -368,7 +372,7 @@ form button.btn-primary {
 
 .card-wrap {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
   gap: 1.5rem;
 }
 
@@ -486,7 +490,7 @@ header nav a {
   color: #36344d;
   cursor: pointer;
 }
-header nav a.logo, header nav a:hover {
+header nav a.logo, header nav a:hover, header nav a.active {
   color: #6747c7;
 }
 header nav ul {
@@ -508,11 +512,23 @@ header nav ul.active {
 header nav ul li {
   padding: 0.5rem 0;
 }
+header nav ul li.user-profile a {
+  margin-left: 2rem;
+  display: inline-flex;
+  gap: 1rem;
+  align-items: center;
+}
+header nav ul li.user-profile a .profile-photo {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
 @media (min-width: 960px) {
   header nav #toggle {
     display: none;
   }
   header nav ul {
+    gap: 2rem;
     flex-direction: row;
     position: static;
     height: auto;
@@ -654,6 +670,37 @@ ul li {
 .view-all {
   display: inline-block;
   margin-top: 1.5rem;
+}
+
+.categories {
+  max-width: 960px;
+  margin: 0 auto 2rem;
+  padding: 1.5rem;
+}
+.categories nav {
+  overflow-x: auto;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: safe center;
+  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  padding: 0.5rem 1rem;
+}
+.categories nav a {
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  background: #fff;
+  color: #53516b;
+}
+.categories nav a.active, .categories nav a:hover {
+  background: #e3def4;
+  color: #36344d;
+}
+@media screen and (min-width: 960px) {
+  .categories {
+    display: none;
+  }
 }
 
 .container-details > * {

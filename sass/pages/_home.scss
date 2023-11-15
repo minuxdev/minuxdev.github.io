@@ -4,3 +4,28 @@
   display: inline-block;
   margin-top: $gutter;
 }
+
+.categories {
+  max-width: $large;
+  margin: 0 auto 2rem;
+  padding: $gutter;
+  nav {
+    overflow-x: auto;
+    @include display-flex(1rem, $jc: safe center);
+    flex-wrap: nowrap;
+    @include padding(0.5rem, 1rem);
+    a {
+      border-radius: 0.25rem;
+      @include padding(0.5rem, 1rem);
+      @include btn-variant("white", "body");
+      &.active,
+      &:hover {
+        @include btn-variant("border", "title");
+      }
+    }
+  }
+
+  @media screen and (min-width: $large) {
+    display: none;
+  }
+}
