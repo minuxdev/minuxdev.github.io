@@ -1,7 +1,7 @@
 @use "../base" as *;
 
 .separator {
-  @include display-flex(0.5rem, space-between);
+  @include display-flex(0.8rem, space-between);
   flex-wrap: nowrap;
   margin: 1rem 0;
 

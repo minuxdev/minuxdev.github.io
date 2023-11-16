@@ -9,24 +9,27 @@ form {
   max-width: $tablet;
 
   @media screen and (min-width: $large) {
-    @include padding(2rem, 2rem);
+    @include padding(3.2rem, 3.2rem);
   }
 
   &.user-authentication {
     max-width: 500px;
     button {
       width: 100%;
-      @include padding(0.75rem, 0.5rem);
+      @include padding(1.2rem, 0.8rem);
+      &.btn-primary {
+        margin-bottom: 1.6rem;
+      }
     }
 
     .inline-group {
-      margin: 1.5rem 0 0;
+      margin: 1.8rem 0 0;
     }
   }
 
   label {
     display: block;
-    margin: 1rem 0 0.5rem;
+    margin: 1.6rem 0 0.8rem;
   }
   textarea {
     resize: none;
@@ -34,7 +37,7 @@ form {
   select,
   input,
   textarea {
-    @include padding(0.75rem, 0.5rem);
+    @include padding(1.2rem, 0.8rem);
   }
 
   input,
@@ -57,7 +60,7 @@ form {
       &::file-selector-button {
         background-color: none;
         border: 1px solid map-get($colors, "border");
-        padding: 0.25rem;
+        padding: 0.4rem;
         border-radius: 2px;
       }
     }
@@ -77,9 +80,9 @@ form {
   }
 
   .inline-group {
-    @include display-flex(0.5rem, space-between);
-    margin: 1rem 0 0.5rem;
-    gap: 0.5rem;
+    @include display-flex(0.8rem, space-between);
+    margin: 1rem 0 0.8rem;
+    gap: 0.8rem;
 
     a.help,
     p.help {
@@ -88,7 +91,7 @@ form {
     }
 
     & > * {
-      @include display-flex(0.5rem);
+      @include display-flex(0.8rem);
       margin: 0;
 
       & > * {
@@ -100,24 +103,24 @@ form {
 
   .block-group {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 1.6rem;
   }
 
   button {
     &.btn-primary {
-      margin-top: 2rem;
+      margin-top: 3.2rem;
     }
-    margin-top: 0.5rem;
+    margin-top: 1.6rem;
   }
 }
 
 .search-form {
-  @include padding(0.5rem, 1rem);
+  @include padding(0.8rem, 1.6rem);
   display: inline-flex;
   align-items: center;
   box-shadow: none;
-  gap: 1.5rem;
+  gap: 2.4rem;
   border: 1px solid #eee;
   background: map-get($colors, "white");
   max-width: 320px;
@@ -129,7 +132,7 @@ form {
   }
 
   input[type="search"] {
-    padding: 0.25rem;
+    padding: 0.4rem;
     border: none;
     background: none;
     transition: all 0.4s ease-in-out;

@@ -7,16 +7,16 @@
 
 .categories {
   max-width: $large;
-  margin: 0 auto 2rem;
+  margin: 0 auto 3.2rem;
   padding: $gutter;
   nav {
     overflow-x: auto;
-    @include display-flex(1rem, $jc: safe center);
+    @include display-flex(1.6rem, $jc: safe center);
     flex-wrap: nowrap;
-    @include padding(0.5rem, 1rem);
+    @include padding(0.4rem, 1.6rem);
     a {
-      border-radius: 0.25rem;
-      @include padding(0.5rem, 1rem);
+      border-radius: 0.4rem;
+      @include padding(0.8rem, 1.6rem);
       @include btn-variant("white", "body");
       &.active,
       &:hover {

@@ -5,7 +5,7 @@ body {
   background: map-get($colors, "background");
   @media (min-width: $large) {
     & > * {
-      @include padding(2rem, 4%);
+      @include padding(3.2rem, 4%);
       .section-wrap {
         @include padding(0rem, 4%);
       }
@@ -19,7 +19,7 @@ body {
 .content-section {
   max-width: $container-width;
   margin-inline: auto;
-  padding: 3rem 1rem 1rem;
+  padding: 4.8rem 1.6rem 1.6rem;
 }
 
 .container-details {
@@ -41,13 +41,13 @@ body {
 .container {
   max-width: $container-width;
   width: 100%;
-  margin: 2rem auto;
+  margin: 3.2rem auto;
 }
 
 ul {
-  @include display-flex(1rem, space-between);
+  @include display-flex(1.6rem, space-between);
 
   li {
-    padding: 0.25rem;
+    padding: 0.8rem;
   }
 }

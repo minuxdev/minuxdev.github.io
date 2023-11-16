@@ -2,7 +2,7 @@
 
 .btn,
 button {
-  @include padding(0.5rem, 2rem);
+  @include padding(0.8rem, 3.2rem);
   display: inline-block;
   border: 1px solid transparent;
   background: none;
@@ -30,7 +30,7 @@ button {
   &.btn-with-icon {
     @include btn-variant("background", "title");
     display: inline-flex;
-    gap: 0.5rem;
+    gap: 0.8rem;
     align-items: center;
     justify-content: center;
     border: 1px solid map-get($colors, "active");
